@@ -20,13 +20,6 @@ export default function AiChatWidget() {
   const navigate = useNavigate();
 
   const [isOpen, setIsOpen] = useState(false);
-  const [showTooltip, setShowTooltip] = useState(() => {
-    try {
-      return !sessionStorage.getItem("ai_tooltip_dismissed");
-    } catch {
-      return false;
-    }
-  });
   const [inputText, setInputText] = useState("");
   const [isTyping, setIsTyping] = useState(false);
 
@@ -65,20 +58,6 @@ export default function AiChatWidget() {
 
   const handleToggleOpen = () => {
     setIsOpen((prev) => !prev);
-    if (showTooltip) {
-      setShowTooltip(false);
-      try {
-        sessionStorage.setItem("ai_tooltip_dismissed", "true");
-      } catch {}
-    }
-  };
-
-  const handleDismissTooltip = (e) => {
-    e.stopPropagation();
-    setShowTooltip(false);
-    try {
-      sessionStorage.setItem("ai_tooltip_dismissed", "true");
-    } catch {}
   };
 
   const handleSend = (textToSend) => {
@@ -157,20 +136,6 @@ export default function AiChatWidget() {
     <>
       {/* حاوية الزر العائم في الركن السفلي */}
       <div className="ai-fab-container">
-        {showTooltip && !isOpen && (
-          <div className="ai-fab-tooltip" onClick={handleToggleOpen}>
-            <span>💡</span>
-            <span>محتاج نصيحة أو ترشيح كورس يناسب وضعك؟ كلمني هنا!</span>
-            <button
-              className="ai-tooltip-close"
-              onClick={handleDismissTooltip}
-              aria-label="إغلاق التلميح"
-            >
-              ✕
-            </button>
-          </div>
-        )}
-
         <button
           className="ai-fab-btn"
           onClick={handleToggleOpen}
