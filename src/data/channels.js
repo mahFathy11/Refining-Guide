@@ -279,6 +279,29 @@ export const channels = [
     primaryLinkText: "قناة USCSB الرسمية على يوتيوب"
   },
   {
+    id: "process-talks-belmasry",
+    name: "Process Talks بالمصري",
+    arabicName: "قناة Process Talks بالمصري",
+    category: "safety",
+    badge: "سلامة العمليات وإدارة PSM بالعربي",
+    avatarIcon: "🛡️",
+    featuredBadge: "42+ فيديو في سلامة العمليات",
+    channelUrl: "https://www.youtube.com/@processtalk",
+    coursesCount: 42,
+    topics: [
+      "Process Safety Fundamentals (مقدمة سلامة العمليات)",
+      "20 Elements of PSM System (العناصر العشرون لإدارة سلامة العمليات CCPS)",
+      "Hazard Identification & Risk Analysis (HIRA)",
+      "Safe Work Practices & Standard Operating Procedures (SOP)",
+      "Asset Integrity & Reliability",
+      "Management of Change (MOC) & Operational Readiness (PSSR)",
+      "Hazardous Area Classification (HAC) & ALARP Principle",
+      "فك شفرة HAZID ودراسات السلامة طبقاً لوزارة البترول والثروة المعدنية المصرية",
+      "تحليل الكوارث الصناعية الكبرى (Bhopal, Texas City, Deepwater Horizon, Piper Alpha, Buncefield)"
+    ],
+    primaryLinkText: "سلسلة سلامة العمليات الكاملة على يوتيوب"
+  },
+  {
     id: "cheme-practice",
     name: "Chemical Engineering Practice",
     arabicName: "Chemical Engineering Practice",

@@ -1,20 +1,15 @@
 import { Link } from "react-router-dom";
 import { intro } from "../data/intro.js";
-import { tracks } from "../data/tracks.js";
-import { companies } from "../data/companies.js";
-import { channels } from "../data/channels.js";
-import { collegeCurriculum } from "../data/collegeCourses.js";
+import { STATS } from "../data/stats.js";
 import UserTrackBanner from "../components/UserTrackBanner.jsx";
 import useSEO from "../hooks/useSEO.js";
-import "../styles/channels.css";
-import "../styles/curriculum.css";
 import "../styles/home.css";
 
 export default function Home() {
   useSEO({
     title: "الرئيسية",
     description: intro.definition,
-    ogImage: "/refinery-engineer.png",
+    ogImage: "/refinery-engineer.jpg",
   });
 
   const doesIcons = ["📐", "🎛️", "⚡", "🛡️", "🔧", "🧪"];
@@ -35,22 +30,22 @@ export default function Home() {
             <div className="home-hero-stats">
               <div className="home-stat-chip">
                 <span>المسارات التخصصية:</span>
-                <strong>{tracks.length} مساراً</strong>
+                <strong>{STATS.tracksCount} مساراً</strong>
               </div>
               <div className="home-stat-chip">
                 <span>شركات التوظيف:</span>
-                <strong>{companies.length}+ شركة</strong>
+                <strong>{STATS.companiesCount}+ شركة</strong>
               </div>
               <div className="home-stat-chip">
                 <span>مقررات الكلية:</span>
-                <strong>{collegeCurriculum.length}+ مقرر</strong>
+                <strong>{STATS.curriculumCount}+ مقرر</strong>
               </div>
             </div>
           </div>
 
           <div className="home-hero-image-card">
             <img
-              src="/refinery-engineer.png"
+              src="/refinery-engineer.jpg"
               alt="مهندس عمليات وتكرير أمام وحدات مصفاة البترول"
               className="home-hero-img"
               loading="eager"
@@ -83,7 +78,7 @@ export default function Home() {
             <Link to="/tracks" className="card big card-featured-tracks">
               <div className="featured-badge-row">
                 <span className="tag ok">🧭 المسارات المهنية</span>
-                <span className="tag">{tracks.length} مسارات</span>
+                <span className="tag">{STATS.tracksCount} مسارات</span>
               </div>
               <strong>التراكات والشغل</strong>
               <p>
@@ -112,7 +107,7 @@ export default function Home() {
             <Link to="/companies" className="card big card-featured-companies">
               <div className="featured-badge-row">
                 <span className="tag ok">🏢 دليل الشركات والمصانع</span>
-                <span className="tag">{companies.length}+ شركة</span>
+                <span className="tag">{STATS.companiesCount}+ شركة</span>
               </div>
               <strong>الشركات وطريقة التقديم</strong>
               <p>
@@ -141,7 +136,7 @@ export default function Home() {
             <Link to="/curriculum" className="card big card-featured-curriculum">
               <div className="featured-badge-row">
                 <span className="tag ok">📚 لائحة السويس</span>
-                <span className="tag">{collegeCurriculum.length}+ مقرر</span>
+                <span className="tag">{STATS.curriculumCount}+ مقرر</span>
               </div>
               <strong>مواد الكلية</strong>
               <p>
@@ -156,7 +151,7 @@ export default function Home() {
             <Link to="/channels" className="card big card-featured-channels">
               <div className="featured-badge-row">
                 <span className="tag yt">🔴 يوتيوب</span>
-                <span className="tag">{channels.length} قناة</span>
+                <span className="tag">{STATS.channelsCount} قناة</span>
               </div>
               <strong>قنوات يوتيوب المعتمدة</strong>
               <p>

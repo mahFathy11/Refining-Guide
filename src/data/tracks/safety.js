@@ -63,6 +63,70 @@ export const safetyTrack = {
           }
         ),
         r(
+          "سلسلة أساسيات سلامة العمليات — Process Safety Fundamentals (Process Talks بالمصري)",
+          "كورس",
+          "b",
+          62,
+          ["قائمة التشغيل الكاملة (42 فيديو على YouTube)", trackLinks.safety.stageOne.processSafetyFundamentalsPlaylist],
+          ["مقدمة السلسلة والفرق بين السلامتين", trackLinks.safety.stageOne.psfIntro],
+          ["العناصر العشرون لإدارة PSM", trackLinks.safety.stageOne.psfTwentyElements],
+          ["فك شفرة HAZID (وزارة البترول المصرية)", trackLinks.safety.stageOne.psfEgyptianPetroleumHazid],
+          ["دراسات السلامة لوزارة البترول", trackLinks.safety.stageOne.psfEgyptianPetroleumStudies],
+          ["تصنيف المناطق الخطرة (HAC)", trackLinks.safety.stageOne.psfHac],
+          ["مبدأ تخفيض المخاطر (ALARP)", trackLinks.safety.stageOne.psfAlarp],
+          {
+            bookNote: "سلسلة تدريبية متكاملة وشاملة باللغة العربية تضم 42 محاضرة فيديو مرئية من قناة «Process Talks بالمصري»؛ تعد المرجع الأفضل والأحدث في أساسيات سلامة العمليات (Process Safety Fundamentals) وإدارة PSM وفق منظومة CCPS (العناصر الـ 20) ومعايير OSHA، مع ربط مباشر ومميز بمتطلبات وزارة البترول والثروة المعدنية المصرية لمهندسي المشروعات والتصميم والعمليات.",
+            sections: [
+              {
+                title: "1. المفاهيم الأساسية ونشأة سلامة العمليات (Fundamentals & Risk)",
+                points: [
+                  "الفرق الجوهري بين السلامة الشخصية المهنية (Personal Safety) التي تركز على السقوط والتعثر ومعدات الوقاية (PPE)، وسلامة العمليات (Process Safety) التي تركز على منع تسرب المواد الخطرة واحتواء الطاقة ومنع الانفجارات الكارثية.",
+                  "التعريف الهندسي لمفهومي الخطر الكامن (Hazard) ومستوى المخاطرة والاحتمالية (Risk) وكيفية التعامل مع مصفوفة المخاطر الصناعية وتقييم الشدة والتكرار.",
+                  "التطور التاريخي لسلامة العمليات والدروس المستفادة من الكوارث المفصلية (Flixborough 1974, Seveso 1976, Bhopal 1984, Texas City 2005)."
+                ]
+              },
+              {
+                title: "2. العناصر العشرون لإدارة سلامة العمليات (20 PSM Elements - CCPS System)",
+                points: [
+                  "ركيزة الالتزام بثقافة السلامة (Commit to Process Safety): ثقافة سلامة العمليات (Culture)، والامتثال للأكواد والمعايير القياسية (Compliance with Standards)، وبناء الكفاءة الهندسية وتأهيل المهندسين (Competency)، ومشاركة العاملين (Workforce Involvement)، والتواصل المجتمعي مع المعنيين (Stakeholder Outreach).",
+                  "ركيزة فهم الأخطار والمخاطر (Understand Hazards and Risk): إدارة معرفة العمليات وبيانات التصميم (Process Knowledge Management - PKM)، وتحديد الأخطار وتحليل المخاطر (Hazard Identification & Risk Analysis - HIRA عبر دراسات HAZID, HAZOP, What-If).",
+                  "ركيزة إدارة المخاطر (Manage Risk): إجراءات التشغيل القياسية (SOP)، ممارسات العمل الآمن وتصاريح العمل (Safe Work Practices & PTW)، سلامة المعدات والنزاهة الميكانيكية والاعتمادية (Asset Integrity & Reliability)، إدارة المقاولين (Contractor Management)، وبرامج التدريب وضمان الأداء (Training & Performance Assurance).",
+                  "إدارة التغيير والجاهزية للتشغيل: التحكم في التغييرات الهندسية والتنظيمية (Management of Change - MOC)، ومراجعة سلامة ما قبل التشغيل (Operational Readiness & PSSR)، والانضباط التشغيلي (Conduct of Operations)، وخطط وإجراءات الاستجابة للطوارئ (Emergency Response Plan - ERP).",
+                  "ركيزة التعلم من الخبرة (Learn from Experience): التحقيق المنهجي في الحوادث وشبه الحوادث (Incident Investigation & Root Cause Analysis)، ومؤشرات قياس الأداء الرائدة والتابعة (Measurements & Metrics)، وتدقيق السلامة الفني (Auditing)، والمراجعة الإدارية للتحسين المستمر (Management Review & Continuous Improvement)."
+                ]
+              },
+              {
+                title: "3. سلامة العمليات للتخصصات الهندسية المختلفة (Cross-Disciplinary PSM)",
+                points: [
+                  "دور مهندسي العمليات (Process)، الميكانيكا (Mechanical)، والكهرباء والأجهزة (Electrical & Instrumentation) في تأمين وحماية حواجز السلامة (Safety Barriers).",
+                  "إدارة وثائق التصميم الهندسي (P&IDs, PFDs, Cause & Effect Diagrams, Equipment Datasheets) كحجر زاوية لمعرفة العمليات.",
+                  "تطبيق إجراءات إدارة التغيير (MOC) قبل تعديل أي معدة أو خط أنابيب أو تغيير ظروف التشغيل (P, T, Flow)."
+                ]
+              },
+              {
+                title: "4. دراسات سلامة العمليات وتطبيقات قطاع البترول المصري (Safety Studies in Egyptian Oil & Gas)",
+                points: [
+                  "فك شفرة ومنهجية دراسة تحديد الأخطار (HAZID) طبقاً لمتطلبات وأدلة وزارة البترول والثروة المعدنية المصرية.",
+                  "دراسات تقييم المخاطر المتكاملة وتحديد قابلية التشغيل (HAZOP) والتقييم الكمي للمخاطر (QRA) وتحليل طبقات الحماية (LOPA).",
+                  "تصنيف المناطق الخطرة (Hazardous Area Classification - HAC) ومناطق Zone 0, Zone 1, Zone 2 واختيار المعدات الكهربائية المقاومة للانفجار (Explosion-Proof).",
+                  "تطبيق مبدأ خفض المخاطر إلى أدنى مستوى معقول عملياً (ALARP - As Low As Reasonably Practicable) وإدارة المقايضات الهندسية والاقتصادية."
+                ]
+              },
+              {
+                title: "5. تحليل الكوارث الصناعية الكبرى (Industrial Disaster Case Studies)",
+                points: [
+                  "كارثة بوبال بالهند (Bhopal 1984): سيناريو تفاعل الماء مع غاز MIC، وانهيار أنظمة الأمان المتعددة وسقوط آلاف الضحايا.",
+                  "انفجار مصفاة تكساس سيتي (BP Texas City 2005): فشل مؤشرات المنسوب وامتلاء برج التقطير وتنفيس الهيدروكربونات إلى الهواء ووجود كبائن المقاولين في المنطقة الخطرة.",
+                  "كارثة ديبووتر هورايزون (Macondo 2010): فشل عزل الأسمنت ومانع الانفجار BOP وسوء تقدير اختبارات الضغط السلبية.",
+                  "كارثة منصة بايبر ألفا (Piper Alpha 1988): انعدام التواصل في تسليم الورديات وتشغيل مضخة تم فك صمام أمانها مسبقاً بدون عزل أعمى.",
+                  "كارثة مستودعات بانسفيلد (Buncefield 2005): تعطل مفتاح المنسوب التلقائي وفيضان البنزين وتكوّن سحابة بخارية غير محصورة أدت لأكبر انفجار في أوروبا وقت السلم."
+                ]
+              }
+            ],
+            tips: "يُنصح بمشاهدة السلسلة بالترتيب: ابدأ بفيديو المقدمة وفهم معنى الخطر والمخاطرة، ثم خصص وقتاً لكل عنصر من عناصر الـ 20 PSM، وركز بوجه خاص على فيديوهات دراسات وزارة البترول المصرية وتصنيف المناطق الخطرة HAC ودراسات الحوادث الكبرى."
+          }
+        ),
+        r(
           "أساسيات ومعايير سلامة العمليات (PSM & OSHA)",
           "كورس",
           "b",
@@ -145,8 +209,9 @@ export const safetyTrack = {
           "فيديو",
           "i",
           59,
-          ["إنجليزي", trackLinks.safety.stageTwo.psmBpTexas],
-          ["مترجم", trackLinks.safety.stageTwo.psmBpTexasAr],
+          ["إنجليزي (CSB)", trackLinks.safety.stageTwo.psmBpTexas],
+          ["مترجم (CSB)", trackLinks.safety.stageTwo.psmBpTexasAr],
+          ["تحليل بالعربي (Process Talks)", trackLinks.safety.stageTwo.psfTexasCityAr],
           {
             bookNote: "تحليل كارثة مصفاة تكساس سيتي 2005 من مجلس السلامة الكيميائية (CSB).. يوضح عواقب ملء برج التقطير واختلال أجهزة القياس وغياب ثقافة سلامة العمليات، وأهمية عدم الاعتماد على مؤشر قياس وحيد."
           }
@@ -156,7 +221,8 @@ export const safetyTrack = {
           "فيديو",
           "i",
           60,
-          trackLinks.safety.stageTwo.psmMacondo,
+          ["فيديو الكارثة (CSB)", trackLinks.safety.stageTwo.psmMacondo],
+          ["تحليل بالعربي (Process Talks)", trackLinks.safety.stageTwo.psfMacondoAr],
           {
             bookNote: "كارثة منصة ديب ووتر هورايزون (Macondo 2010).. أكبر تسرب نفطي في التاريخ وتحليل أسباب فشل مانع الانفجار (BOP) وتجاهل مؤشرات الضغط وأهمية إدارة التغيير (MOC)."
           }
@@ -166,12 +232,33 @@ export const safetyTrack = {
           "فيديو",
           "i",
           60,
-          trackLinks.safety.stageTwo.psmPiper,
+          ["فيديو الكارثة (مدبلج)", trackLinks.safety.stageTwo.psmPiper],
+          ["تحليل بالعربي (Process Talks)", trackLinks.safety.stageTwo.psfPiperAr],
           {
             bookNote: "كارثة منصة بايبر ألفا 1988 في بحر الشمال.. أسوأ كارثة في تاريخ المنصات البحرية ودرس قاسٍ في تصاريح العمل (Permit to Work) والتواصل بين الورديات بعد تشغيل مضخة صمام أمانها مفكوك."
           }
         ),
-        r("Bhopal 1984", "فيديو", "i", 60, trackLinks.safety.stageTwo.psmBhopal),
+        r(
+          "Bhopal 1984",
+          "فيديو",
+          "i",
+          60,
+          ["فيديو الكارثة (CSB)", trackLinks.safety.stageTwo.psmBhopal],
+          ["تحليل بالعربي (Process Talks)", trackLinks.safety.stageTwo.psfBhopalAr],
+          {
+            bookNote: "كارثة بوبال 1984 بالهند.. أكبر وأسوأ حادث كيميائي وصناعي في التاريخ نتيجة تسرب غاز ميثيل إيزوسيانات (MIC) القاتل من مصنع يونيون كاربايد، وتوضح أهمية أنظمة التبريد والغسيل والتصميم الآمن المتأصل (Inherently Safer Design)."
+          }
+        ),
+        r(
+          "Buncefield 2005 — Overfill & Vapor Cloud Explosion",
+          "فيديو",
+          "i",
+          60,
+          ["تحليل الكارثة بالعربي (Process Talks)", trackLinks.safety.stageTwo.psfBuncefieldAr],
+          {
+            bookNote: "تحليل كارثة انفجار مستودعات تخزين الوقود في بانسفيلد ببريطانيا عام 2005.. دراسة أسباب فيضان صهاريج البنزين وفشل مفاتيح المنسوب العالي (High Level Switches) وتكوّن سحابة بخار هيدروكربونية غير محصورة (VCE) والدروس المستفادة في أنظمة الحماية التلقائية وعزل المنشآت."
+          }
+        ),
         r("Port Neal 1994 — Operating Procedures", "فيديو", "i", 60, trackLinks.safety.stageTwo.psmPortNeal),
         r("Esso Longford 1998 — Hazard Identification", "فيديو", "i", 59, ["1", trackLinks.safety.stageTwo.psmEsso1], ["2", trackLinks.safety.stageTwo.psmEsso2]),
         r("ARCO Channelview 1990 — Asset Integrity", "فيديو", "i", 59, trackLinks.safety.stageTwo.psmArco),

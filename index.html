@@ -23,19 +23,26 @@
     <meta property="og:site_name" content="ChemTracks" />
     <meta property="og:title" content="مسارات مهندس التكرير والبتروكيماويات | ChemTracks" />
     <meta property="og:description" content="خارطة الطريق الهندسية الشاملة لمهندسي العمليات والكيمياء والتكرير: 16 مساراً تخصصياً، دليل المصافي والشركات، المنح الدولية، وأسرار المقابلات الفنية." />
-    <meta property="og:image" content="/refinery-engineer.png" />
+    <meta property="og:image" content="/refinery-engineer.jpg" />
     <meta property="og:locale" content="ar_AR" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="مسارات مهندس التكرير والبتروكيماويات | ChemTracks" />
     <meta name="twitter:description" content="خارطة الطريق الهندسية الشاملة لمهندسي العمليات والكيمياء والتكرير: 16 مساراً تخصصياً ودليل الشركات والمنح." />
-    <meta name="twitter:image" content="/refinery-engineer.png" />
+    <meta name="twitter:image" content="/refinery-engineer.jpg" />
 
-    <!-- Performance: Preconnect & Fonts -->
+    <!-- LCP Hero Image Preload for Instant Discovery -->
+    <link rel="preload" as="image" href="/refinery-engineer.jpg" fetchpriority="high" />
+
+    <!-- Performance: Preconnect & Asynchronous Fonts (Zero Render-Blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" />
+    </noscript>
 
     <!-- Schema.org JSON-LD Structured Data for Rich Search Results -->
     <script type="application/ld+json">

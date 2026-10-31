@@ -1,9 +1,7 @@
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import GlobalSearch from "./GlobalSearch.jsx";
 import ThemeSwitcher from "./ThemeSwitcher.jsx";
-import UserProfileModal from "./UserProfileModal.jsx";
-import AiChatWidget from "./AiChatWidget.jsx";
 import ScrollToTopButton from "./ScrollToTopButton.jsx";
 import Footer from "./Footer.jsx";
 import { useAuth } from "../context/AuthContext.jsx";
@@ -11,14 +9,18 @@ import useProgress, { trackCount } from "../hooks/useProgress.js";
 import useBookmarks from "../hooks/useBookmarks.js";
 import { tracks } from "../data/tracks.js";
 
+// Lazy load heavy floating widgets to free initial main thread
+const UserProfileModal = lazy(() => import("./UserProfileModal.jsx"));
+const AiChatWidget = lazy(() => import("./AiChatWidget.jsx"));
+
 const links = [
   { to: "/", label: "الرئيسية", end: true },
-  { to: "/curriculum", label: "مواد الكلية" },
   { to: "/tracks", label: "المسارات" },
-  { to: "/companies", label: "الشركات" },
   { to: "/tips", label: "الخلاصة والنصائح" },
-  { to: "/channels", label: "قنوات يوتيوب" },
+  { to: "/companies", label: "الشركات" },
   { to: "/scholarships", label: "المنح الدراسية" },
+  { to: "/curriculum", label: "مواد الكلية" },
+  { to: "/channels", label: "قنوات يوتيوب" },
 ];
 
 export default function Layout() {
@@ -28,11 +30,8 @@ export default function Layout() {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
 
   const targetTrackId = currentUser?.targetTrack || "design";
-  const targetTrackObj = Array.isArray(tracks)
-    ? tracks.find((t) => t.id === targetTrackId) || tracks[0]
-    : null;
-  const targetPct = targetTrackObj
-    ? trackCount(targetTrackObj, done)?.pct || 0
+  const targetPct = currentUser && Array.isArray(tracks)
+    ? trackCount(tracks.find((t) => t.id === targetTrackId) || tracks[0], done)?.pct || 0
     : 0;
 
   return (
@@ -129,16 +128,22 @@ export default function Layout() {
 
       <Footer />
 
-      <UserProfileModal
-        isOpen={isProfileOpen}
-        onClose={() => setIsProfileOpen(false)}
-      />
+      {isProfileOpen && (
+        <Suspense fallback={null}>
+          <UserProfileModal
+            isOpen={isProfileOpen}
+            onClose={() => setIsProfileOpen(false)}
+          />
+        </Suspense>
+      )}
 
       {/* زر العودة لأعلى الصفحة */}
       <ScrollToTopButton />
 
       {/* المستشار الهندسي الذكي العائم */}
-      <AiChatWidget />
+      <Suspense fallback={null}>
+        <AiChatWidget />
+      </Suspense>
     </>
   );
 }

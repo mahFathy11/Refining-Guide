@@ -1140,7 +1140,7 @@
       rgba(11, 22, 42, 0.88) 55%, 
       rgba(15, 23, 42, 0.94) 100%
     ),
-    url('/bg-interviews.png');
+    url('/bg-interviews.jpg');
   background-size: cover;
   background-position: center 40%;
   background-repeat: no-repeat;
@@ -1158,7 +1158,7 @@
       rgba(11, 22, 42, 0.88) 55%, 
       rgba(15, 23, 42, 0.94) 100%
     ),
-    url('/bg-jobs.png');
+    url('/bg-jobs.jpg');
   background-size: cover;
   background-position: center 35%;
 }

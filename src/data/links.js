@@ -273,11 +273,22 @@ export const trackLinks = {
       safetyAwarenessAyman: "https://www.youtube.com/watch?v=cwXvKTcidn4", // Safety Awareness in Oil and Gas Industry
       psmIntroAmmar: "https://youtu.be/JvO3yrCH5EA", // Introduction to Process Safety (Eng. Sayed Ammar - SPE Suez)
       psmShafik: "https://youtu.be/azLktuW8yL0", // Process Safety Management - م. أحمد شفيق
+      psmIntroAmer: "https://youtu.be/dAZRiJOGIhI", // كورس أساسيات PSM (م. السيد عامر)
+      osha1910: "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.119", // معايير OSHA 1910.119
+      ccpsBook: "https://www.aiche.org/ccps", // مركز سلامة العمليات الكيميائية CCPS
+      processSafetyFundamentalsPlaylist: "https://youtube.com/playlist?list=PLTn5Mzx_tiJ-6Jca_iv0L78v8MFYiSgIh", // السلسلة الكاملة في سلامة العمليات بالعربي (Process Talks بالمصري)
+      psfIntro: "https://youtu.be/1HH2jfxotxQ", // مقدمة أساسيات سلامة العمليات
+      psfTwentyElements: "https://youtu.be/WX1BZZhkSXk", // العناصر العشرون لإدارة سلامة العمليات PSM
+      psfEgyptianPetroleumHazid: "https://youtu.be/0F5q10xTcnA", // فك شفرة HAZID طبقاً لوزارة البترول المصرية
+      psfEgyptianPetroleumStudies: "https://youtu.be/e17no6x594U", // دراسات سلامة العمليات لوزارة البترول المصرية
+      psfHac: "https://youtu.be/K0f0NQQ7vQs", // تصنيف الأماكن الخطرة HAC
+      psfAlarp: "https://youtu.be/1bjEaGU2WJo", // مبدأ خفض المخاطر ALARP
     },
     // المرحلة 2: دراسات حوادث
     stageTwo: {
       psmBpTexas: "https://youtu.be/c9JY3eT4cdM", // ص 59
       psmBpTexasAr: "https://youtu.be/7IlKedGa9Sk", // ص 59
+      psfTexasCityAr: "https://youtu.be/NDJfLRBdUks", // حادثة انفجار مصفاة بي بي تكساس سيتي - Process Talks بالمصري
       psmArco: "https://youtu.be/ETdLTGNVRTE", // ص 59
       psmColumbia: "https://youtu.be/LFdAq7rGvoY", // ص 59
       psmConceptSciences: "https://youtu.be/bfENME4QSIY", // ص 59
@@ -285,13 +296,17 @@ export const trackLinks = {
       psmEsso2: "https://youtu.be/ruqsnROumbM", // ص 59
       psmPortNeal: "https://youtu.be/AWz1HIT2_mI", // ص 60
       psmPiper: "https://youtu.be/wFF66G9bdJY", // ص 60
+      psfPiperAr: "https://youtu.be/tCfucNtgDWQ", // حادثة منصة بايبر ألفا - Process Talks بالمصري
       psmPartridge: "https://youtu.be/OqGAqwwjY7o", // ص 60
       psmPartridgeAr: "https://youtu.be/yGNeJ72t1Fw", // ص 60
       psmFormosa: "https://youtu.be/fjOfp_3GRb4", // ص 60
       psmSandoz: "https://youtu.be/6RjTvN2QhSY", // ص 60
       psmExxonValdez: "https://youtu.be/WD4XxqfxX0U", // ص 60
       psmBhopal: "https://youtu.be/HZirRB32qzU", // ص 60
+      psfBhopalAr: "https://youtu.be/kXx3-nZWRWg", // حادثة بوبال - Process Talks بالمصري
       psmMacondo: "https://youtu.be/iDGnfCkNcXM", // ص 60
+      psfMacondoAr: "https://youtu.be/hNKlaIbXv3w", // حادثة ديبووتر هورايزون - Process Talks بالمصري
+      psfBuncefieldAr: "https://youtu.be/cDm1prjT7x4", // حادثة انفجار مستودعات بانسفيلد - Process Talks بالمصري
     },
   },
 

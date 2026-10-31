@@ -128,11 +128,13 @@ const ENGINEERING_GUIDES = [
 export default function GlobalSearch() {
   const [query, setQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+  const [isActivated, setIsActivated] = useState(false);
   const containerRef = useRef(null);
   const navigate = useNavigate();
 
-  // فهرسة عميقة وشاملة لجميع الكورسات والمصادر والنقاط الفرعية
+  // فهرسة عميقة وشاملة لجميع الكورسات والمصادر والنقاط الفرعية (تُحسب فقط عند تفعيل البحث)
   const allResources = useMemo(() => {
+    if (!isActivated && !query) return [];
     const list = [];
     if (!Array.isArray(tracks)) return list;
 
@@ -209,10 +211,11 @@ export default function GlobalSearch() {
       });
     });
     return list;
-  }, []);
+  }, [isActivated, query]);
 
   // فهرسة قنوات اليوتيوب والمحاضرين
   const allChannels = useMemo(() => {
+    if (!isActivated && !query) return [];
     if (!Array.isArray(channels)) return [];
     return channels.map((ch) => {
       const topicsText = safeJoin(ch.topics);
@@ -224,18 +227,31 @@ export default function GlobalSearch() {
         searchableText: searchable,
       };
     });
-  }, []);
+  }, [isActivated, query]);
 
   // فهرسة مراجع وزتونة المقابلات
   const allGuides = useMemo(() => {
+    if (!isActivated && !query) return [];
     return ENGINEERING_GUIDES.map((g) => ({
       ...g,
       searchableText: normalize(`${g.title} ${g.author} ${g.type}`),
     }));
-  }, []);
+  }, [isActivated, query]);
 
   // نتائج البحث الذكية والترتيب حسب الصلة
   const results = useMemo(() => {
+    if (!isActivated && !query) {
+      return {
+        tracks: [],
+        resources: [],
+        companies: [],
+        channels: [],
+        guides: [],
+        scholarships: [],
+        courses: [],
+        total: 0,
+      };
+    }
     const qNorm = normalize(query);
     if (!qNorm) {
       return {
@@ -245,6 +261,7 @@ export default function GlobalSearch() {
         channels: [],
         guides: [],
         scholarships: [],
+        courses: [],
         total: 0,
       };
     }
@@ -445,10 +462,12 @@ export default function GlobalSearch() {
           placeholder="ابحث عن كورس، محاضر، شركة، أو موضوع..."
           value={query}
           onChange={(e) => {
+            setIsActivated(true);
             setQuery(e.target.value);
             setIsOpen(true);
           }}
           onFocus={() => {
+            setIsActivated(true);
             if (query.trim()) setIsOpen(true);
           }}
           aria-label="البحث في الكورسات والشركات والمسارات"

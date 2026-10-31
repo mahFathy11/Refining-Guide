@@ -254,12 +254,6 @@ export default function LoginPage() {
           <span>تصفح المنصة مباشرة كزائر</span>
           <span>👤</span>
         </button>
-
-        {/* تنبيه الأمان والتشفير */}
-        <div className="login-security-notice">
-          <span>🔒</span>
-          <span>كلمة المرور مشفرة أمنياً عبر خادم خاص (PBKDF2) ولا يتم حفظها على متصفحك إطلاقاً.</span>
-        </div>
       </div>
     </div>
   );

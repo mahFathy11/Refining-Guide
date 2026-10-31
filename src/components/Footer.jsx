@@ -34,22 +34,22 @@ export default function Footer() {
                 <NavLink to="/">🏠 الصفحة الرئيسية</NavLink>
               </li>
               <li>
-                <NavLink to="/curriculum">📖 مواد الكلية</NavLink>
-              </li>
-              <li>
                 <NavLink to="/tracks">🛤️ المسارات الهندسية</NavLink>
-              </li>
-              <li>
-                <NavLink to="/companies">🏭 دليل الشركات</NavLink>
               </li>
               <li>
                 <NavLink to="/tips">💡 الخلاصة والمقابلات</NavLink>
               </li>
               <li>
-                <NavLink to="/channels">📺 قنوات ومحاضرات يوتيوب</NavLink>
+                <NavLink to="/companies">🏭 دليل الشركات</NavLink>
               </li>
               <li>
                 <NavLink to="/scholarships">🎓 المنح والدراسات العليا</NavLink>
+              </li>
+              <li>
+                <NavLink to="/curriculum">📖 مواد الكلية</NavLink>
+              </li>
+              <li>
+                <NavLink to="/channels">📺 قنوات ومحاضرات يوتيوب</NavLink>
               </li>
             </ul>
           </div>

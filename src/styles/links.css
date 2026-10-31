@@ -443,7 +443,7 @@
       rgba(11, 22, 42, 0.88) 55%, 
       rgba(15, 23, 42, 0.94) 100%
     ),
-    url('/bg-tracks.png');
+    url('/bg-tracks.jpg');
   background-size: cover;
   background-position: center 35%;
   background-repeat: no-repeat;
@@ -485,7 +485,7 @@
       rgba(11, 22, 42, 0.88) 55%, 
       rgba(15, 23, 42, 0.94) 100%
     ),
-    url('/bg-track-detail.png');
+    url('/bg-track-detail.jpg');
   background-size: cover;
   background-position: center 40%;
   background-repeat: no-repeat;
@@ -1122,7 +1122,7 @@
       rgba(11, 22, 42, 0.88) 55%, 
       rgba(15, 23, 42, 0.94) 100%
     ),
-    url('/bg-tips.png');
+    url('/bg-tips.jpg');
   background-size: cover;
   background-position: center 40%;
   background-repeat: no-repeat;
@@ -1356,7 +1356,7 @@
       rgba(11, 22, 42, 0.88) 55%, 
       rgba(15, 23, 42, 0.94) 100%
     ),
-    url('/bg-companies.png');
+    url('/bg-companies.jpg');
   background-size: cover;
   background-position: center 35%;
   background-repeat: no-repeat;
