@@ -88,6 +88,10 @@
 }
 
 * { box-sizing: border-box; }
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
 body { 
   margin: 0; 
   background-color: var(--site-bg, #f8fafc); 
@@ -105,13 +109,16 @@ body {
 }
 a { color: var(--ac); }
 :focus-visible { outline: 2px solid var(--ac); outline-offset: 2px; }
-.wrap { width: 100%; max-width: 100%; margin: 0 auto; padding: 0 clamp(16px, 3vw, 48px); }
+.wrap { width: 100%; max-width: 100%; margin: 0 auto; padding: 0 clamp(12px, 3vw, 48px); }
 h1 { font-size: 1.9rem; line-height: 1.3; margin: .6em 0 .3em; color: var(--ink); }
 h2 { font-size: 1.3rem; margin: 1.8em 0 .5em; color: var(--ink); font-weight: 800; }
 h3 { font-size: 1.05rem; margin: 1.2em 0 .4em; color: var(--ink); }
 p { color: var(--mut); margin: .3em 0; }
 code { background: color-mix(in srgb, var(--ac) 8%, var(--card)); color: var(--ac); border: 1px solid var(--line); padding: 2px 7px; border-radius: 6px; }
 
+/* ========================================================
+   Header & Navigation Responsive Styles
+   ======================================================== */
 .site-header { 
   background: rgba(255, 255, 255, 0.94); 
   backdrop-filter: blur(12px);
@@ -122,12 +129,181 @@ code { background: color-mix(in srgb, var(--ac) 8%, var(--card)); color: var(--a
   z-index: 100; 
   box-shadow: 0 2px 12px rgba(15, 23, 42, 0.05);
 }
-.bar-row { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; padding-block: 10px; }
-.brand { font-weight: 700; color: var(--ink); text-decoration: none; white-space: nowrap; }
-nav { display: flex; gap: 6px; }
-nav a { padding: 4px 12px; border-radius: 6px; text-decoration: none; color: var(--mut); font-weight: 600; }
-nav a:hover { color: var(--ink); background: color-mix(in srgb, var(--ac) 8%, transparent); }
-nav a.on { background: var(--ac); color: #ffffff; }
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-block: 8px;
+}
+
+.header-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.header-brand-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 1.08rem;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.header-tools-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* زر المحفوظات في الهيدر */
+.header-bookmark-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 99px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: color-mix(in srgb, var(--line) 30%, transparent);
+  border: 1px solid var(--line);
+  color: var(--mut);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.header-bookmark-btn:hover {
+  border-color: var(--ac);
+  color: var(--ink);
+  background: color-mix(in srgb, var(--ac) 8%, var(--card));
+}
+
+.bookmark-count-badge {
+  background: #d97706;
+  color: #fff;
+  border-radius: 99px;
+  padding: 1px 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* شريط التنقل والتبويبات السريعة */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-block: 2px 4px;
+}
+
+.site-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.site-nav .nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 14px;
+  border-radius: 99px;
+  text-decoration: none;
+  color: var(--mut);
+  font-weight: 600;
+  font-size: 0.88rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  background: color-mix(in srgb, var(--card) 92%, var(--line));
+  border: 1px solid var(--line);
+  transition: all 0.18s ease;
+}
+
+.site-nav .nav-link:hover {
+  color: var(--ink);
+  background: color-mix(in srgb, var(--ac) 10%, var(--card));
+  border-color: color-mix(in srgb, var(--ac) 40%, transparent);
+}
+
+.site-nav .nav-link.on {
+  background: var(--ac);
+  color: #ffffff;
+  border-color: var(--ac);
+  box-shadow: 0 3px 10px color-mix(in srgb, var(--ac) 30%, transparent);
+}
+
+/* استجابة شريط الهيدر مع الموبايل والشاشات الصغيرة */
+@media (max-width: 900px) {
+  .header-inner {
+    padding-block: 8px 6px;
+    gap: 8px;
+  }
+  .header-top-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .header-brand-group {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .brand {
+    font-size: 0.98rem;
+  }
+  .header-tools-group {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .site-nav {
+    border-top: 1px solid color-mix(in srgb, var(--line) 60%, transparent);
+    padding-top: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-bookmark-btn .bookmark-label {
+    display: none;
+  }
+  .header-bookmark-btn {
+    padding: 6px 9px;
+  }
+  .theme-switcher-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+  .theme-switcher-btn .theme-switcher-label {
+    font-size: 0.78rem;
+  }
+  .site-nav .nav-link {
+    padding: 5px 12px;
+    font-size: 0.82rem;
+  }
+}
+
 .foot { color: var(--mut); font-size: .85rem; padding-block: 28px; }
 
 .hero { display: grid; grid-template-columns: 1fr 230px; gap: 28px; align-items: start; padding-top: 22px; }

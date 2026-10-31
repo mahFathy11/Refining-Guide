@@ -1,5 +1,5 @@
-import { useState, lazy, Suspense } from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { useState, lazy, Suspense, useRef, useEffect } from "react";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
 import GlobalSearch from "./GlobalSearch.jsx";
 import ThemeSwitcher from "./ThemeSwitcher.jsx";
 import ScrollToTopButton from "./ScrollToTopButton.jsx";
@@ -28,92 +28,85 @@ export default function Layout() {
   const { done } = useProgress();
   const { count: bookmarkCount } = useBookmarks();
   const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const location = useLocation();
+  const navRef = useRef(null);
 
   const targetTrackId = currentUser?.targetTrack || "design";
   const targetPct = currentUser && Array.isArray(tracks)
     ? trackCount(tracks.find((t) => t.id === targetTrackId) || tracks[0], done)?.pct || 0
     : 0;
 
+  // تمرير التبويب النشط في المنتصف تلقائياً في شاشات الموبايل
+  useEffect(() => {
+    if (navRef.current) {
+      const activeTab = navRef.current.querySelector(".nav-link.on");
+      if (activeTab) {
+        activeTab.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      }
+    }
+  }, [location.pathname]);
+
   return (
     <>
       <header className="site-header">
-        <div className="wrap bar-row">
-          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-            <NavLink to="/" className="brand">
-              مسارات الهندسة الكيميائية
-            </NavLink>
-
-            {/* شريحة المستخدم النشط أو رابط تسجيل الدخول */}
-            {currentUser ? (
-              <button
-                className="user-nav-chip"
-                onClick={() => setIsProfileOpen(true)}
-                title="الملف الشخصي وإحصائيات المسار"
-              >
-                <span className="user-chip-avatar">{currentUser.avatar || "👨‍🔬"}</span>
-                <span className="user-chip-name">{currentUser.name}</span>
-                <span className="user-chip-pct">{targetPct}%</span>
-              </button>
-            ) : (
-              <NavLink
-                to="/login"
-                className="header-login-link"
-                title="سجل حسابك لحفظ تقدمك بشكل دائم"
-              >
-                <span>تسجيل حساب ↗</span>
+        <div className="wrap header-inner">
+          <div className="header-top-bar">
+            {/* الهوية والمستخدم */}
+            <div className="header-brand-group">
+              <NavLink to="/" className="brand">
+                مسارات الهندسة الكيميائية
               </NavLink>
-            )}
-          </div>
 
-          <div style={{ display: "flex", alignItems: "center", gap: "10px", flexWrap: "wrap" }}>
-            <GlobalSearch />
-            <ThemeSwitcher />
-
-            {/* زر المحفوظات السريع */}
-            <button
-              type="button"
-              className="card-bookmark-btn"
-              onClick={() => setIsProfileOpen(true)}
-              title={bookmarkCount > 0 ? `محفوظاتي (${bookmarkCount})` : "المحفوظات والمفضلة"}
-              style={{
-                width: "auto",
-                padding: "6px 12px",
-                gap: "6px",
-                borderRadius: "99px",
-                fontSize: "0.85rem",
-                fontWeight: 600,
-                color: bookmarkCount > 0 ? "#d97706" : "var(--mut)",
-                background: bookmarkCount > 0 ? "rgba(245, 158, 11, 0.12)" : "color-mix(in srgb, var(--line) 30%, transparent)",
-                borderColor: bookmarkCount > 0 ? "rgba(245, 158, 11, 0.3)" : "var(--line)",
-              }}
-            >
-              <span>⭐️</span>
-              <span style={{ fontSize: "0.82rem" }}>محفوظاتي</span>
-              {bookmarkCount > 0 && (
-                <span
-                  style={{
-                    background: "#d97706",
-                    color: "#fff",
-                    borderRadius: "99px",
-                    padding: "1px 6px",
-                    fontSize: "0.72rem",
-                    fontWeight: 700,
-                    lineHeight: 1.2,
-                  }}
+              {currentUser ? (
+                <button
+                  className="user-nav-chip"
+                  onClick={() => setIsProfileOpen(true)}
+                  title="الملف الشخصي وإحصائيات المسار"
                 >
-                  {bookmarkCount}
-                </span>
+                  <span className="user-chip-avatar">{currentUser.avatar || "👨‍🔬"}</span>
+                  <span className="user-chip-name">{currentUser.name}</span>
+                  <span className="user-chip-pct">{targetPct}%</span>
+                </button>
+              ) : (
+                <NavLink
+                  to="/login"
+                  className="header-login-link"
+                  title="سجل حسابك لحفظ تقدمك بشكل دائم"
+                >
+                  <span>تسجيل حساب ↗</span>
+                </NavLink>
               )}
-            </button>
+            </div>
+
+            {/* أدوات البحث والمظهر والمحفوظات */}
+            <div className="header-tools-group">
+              <GlobalSearch />
+              <div className="header-actions">
+                <ThemeSwitcher />
+                <button
+                  type="button"
+                  className="header-bookmark-btn"
+                  onClick={() => setIsProfileOpen(true)}
+                  title={bookmarkCount > 0 ? `محفوظاتي (${bookmarkCount})` : "المحفوظات والمفضلة"}
+                >
+                  <span>⭐️</span>
+                  <span className="bookmark-label">محفوظاتي</span>
+                  {bookmarkCount > 0 && (
+                    <span className="bookmark-count-badge">{bookmarkCount}</span>
+                  )}
+                </button>
+              </div>
+            </div>
           </div>
 
-          <nav>
+          {/* شريط الأقسام والتبويبات: شريط أفقي مخصص للشاشات الصغيرة والكبيرة دون خروج عن الشاشة */}
+          <nav className="site-nav" ref={navRef} aria-label="أقسام الموقع">
             {links.map((l) => (
               <NavLink
                 key={l.to}
                 to={l.to}
                 end={l.end}
-                className={({ isActive }) => (isActive ? "on" : "")}
+                className={({ isActive }) => (isActive ? "nav-link on" : "nav-link")}
               >
                 {l.label}
               </NavLink>
