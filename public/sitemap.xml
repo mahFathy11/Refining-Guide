@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- الصفحات الرئيسية -->
+  <url>
+    <loc>https://chem-tracks.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://chem-tracks.com/#/tracks</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://chem-tracks.com/#/companies</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://chem-tracks.com/#/scholarships</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://chem-tracks.com/#/courses</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://chem-tracks.com/#/channels</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://chem-tracks.com/#/tips</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://chem-tracks.com/#/templates</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://chem-tracks.com/#/interview-stages</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- المسارات المهنية الـ 16 -->
+  <url><loc>https://chem-tracks.com/#/tracks/found</loc><priority>0.8</priority></url>
+  <url><loc>https://chem-tracks.com/#/tracks/design</loc><priority>0.8</priority></url>
+  <url><loc>https://chem-tracks.com/#/tracks/equip</loc><priority>0.8</priority></url>
+  <url><loc>https://chem-tracks.com/#/tracks/sim</loc><priority>0.8</priority></url>
+  <url><loc>https://chem-tracks.com/#/tracks/ops</loc><priority>0.8</priority></url>
+  <url><loc>https://chem-tracks.com/#/tracks/safety</loc><priority>0.8</priority></url>
+  <url><loc>https://chem-tracks.com/#/tracks/rpg</loc><priority>0.8</priority></url>
+  <url><loc>https://chem-tracks.com/#/tracks/corr</loc><priority>0.8</priority></url>
+  <url><loc>https://chem-tracks.com/#/tracks/planning</loc><priority>0.8</priority></url>
+  <url><loc>https://chem-tracks.com/#/tracks/env</loc><priority>0.8</priority></url>
+  <url><loc>https://chem-tracks.com/#/tracks/sustainability</loc><priority>0.8</priority></url>
+  <url><loc>https://chem-tracks.com/#/tracks/sales</loc><priority>0.8</priority></url>
+  <url><loc>https://chem-tracks.com/#/tracks/commissioning</loc><priority>0.8</priority></url>
+  <url><loc>https://chem-tracks.com/#/tracks/mud</loc><priority>0.8</priority></url>
+  <url><loc>https://chem-tracks.com/#/tracks/qc</loc><priority>0.8</priority></url>
+  <url><loc>https://chem-tracks.com/#/tracks/rnd</loc><priority>0.8</priority></url>
+</urlset>

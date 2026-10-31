@@ -1,0 +1,505 @@
+/* ========================================================
+   أنماط المستشار الهندسي الذكي العائم
+   (Floating ChE AI Advisor & Chat Drawer)
+   ======================================================== */
+
+/* الزر العائم في الركن السفلي */
+.ai-fab-container {
+  position: fixed;
+  bottom: 24px;
+  inset-inline-start: 24px;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+/* تلميح الترحيب الصغير فوق الزر */
+.ai-fab-tooltip {
+  background: var(--card);
+  color: var(--ink);
+  border: 1px solid var(--ac);
+  border-radius: 12px;
+  padding: 8px 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: tooltipFloat 3s ease-in-out infinite;
+  white-space: nowrap;
+  cursor: pointer;
+  max-width: 280px;
+}
+
+@keyframes tooltipFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.ai-tooltip-close {
+  background: none;
+  border: none;
+  color: var(--mut);
+  cursor: pointer;
+  padding: 0 2px;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.ai-tooltip-close:hover {
+  color: var(--ink);
+}
+
+/* الزر الأساسي العائم */
+.ai-fab-btn {
+  font: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px 10px 14px;
+  border-radius: 99px;
+  background: linear-gradient(135deg, var(--ac), color-mix(in srgb, var(--ac) 75%, #059669));
+  color: #fff;
+  border: 2px solid color-mix(in srgb, #fff 25%, transparent);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.92rem;
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--ac) 45%, transparent);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: aiPulseGlow 3s infinite;
+}
+
+@keyframes aiPulseGlow {
+  0%, 100% {
+    box-shadow: 0 8px 24px color-mix(in srgb, var(--ac) 45%, transparent), 0 0 0 0 color-mix(in srgb, var(--ac) 40%, transparent);
+  }
+  50% {
+    box-shadow: 0 12px 30px color-mix(in srgb, var(--ac) 60%, transparent), 0 0 0 8px color-mix(in srgb, var(--ac) 0%, transparent);
+  }
+}
+
+.ai-fab-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 12px 32px color-mix(in srgb, var(--ac) 60%, transparent);
+}
+
+.ai-fab-btn:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.ai-fab-icon-wrap {
+  position: relative;
+  font-size: 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-fab-status-dot {
+  position: absolute;
+  top: -1px;
+  inset-inline-end: -2px;
+  width: 9px;
+  height: 9px;
+  background: #10b981;
+  border: 2px solid var(--card);
+  border-radius: 50%;
+}
+
+.ai-fab-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ai-sparkle {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* ========================================================
+   نافذة المحادثة (Chat Drawer / Window)
+   ======================================================== */
+.ai-chat-window {
+  position: fixed;
+  bottom: 84px;
+  inset-inline-start: 24px;
+  width: 410px;
+  max-width: calc(100vw - 32px);
+  height: 600px;
+  max-height: calc(100vh - 105px);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: chatSlideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes chatSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* هيدر نافذة الشات */
+.ai-chat-header {
+  padding: 14px 18px;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--ac) 12%, var(--card)), var(--card));
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ai-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ai-header-avatar {
+  font-size: 1.6rem;
+  width: 40px;
+  height: 40px;
+  background: color-mix(in srgb, var(--ac) 14%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--ac) 30%, transparent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-header-title-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.ai-header-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ai-header-status {
+  font-size: 0.74rem;
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+}
+
+.ai-status-pulse {
+  width: 7px;
+  height: 7px;
+  background: #10b981;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25);
+}
+
+.ai-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ai-header-btn {
+  background: none;
+  border: none;
+  color: var(--mut);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.ai-header-btn:hover {
+  background: color-mix(in srgb, var(--line) 50%, transparent);
+  color: var(--ink);
+}
+
+/* شريط الأسئلة السريعة المقترحة (Suggestion Chips) */
+.ai-chips-bar {
+  padding: 10px 14px;
+  background: color-mix(in srgb, var(--card) 85%, var(--bg));
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.ai-chips-bar::-webkit-scrollbar {
+  height: 4px;
+}
+.ai-chips-bar::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 4px;
+}
+
+.ai-chip-btn {
+  font: inherit;
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 99px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.ai-chip-btn:hover {
+  border-color: var(--ac);
+  color: var(--ac);
+  background: color-mix(in srgb, var(--ac) 8%, var(--card));
+  transform: translateY(-1px);
+}
+
+/* منطقة عرض الرسائل */
+.ai-messages-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ai-messages-list::-webkit-scrollbar {
+  width: 5px;
+}
+.ai-messages-list::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 4px;
+}
+
+/* فقاعة الرسالة */
+.ai-message-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  animation: messageFadeIn 0.2s ease;
+}
+
+@keyframes messageFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ai-message-row.user {
+  flex-direction: row-reverse;
+}
+
+.ai-msg-avatar {
+  font-size: 1.25rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--ac) 12%, var(--card));
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ai-message-row.user .ai-msg-avatar {
+  background: color-mix(in srgb, var(--ac) 25%, var(--card));
+}
+
+.ai-msg-bubble {
+  max-width: 82%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.ai-message-row.ai .ai-msg-bubble {
+  background: color-mix(in srgb, var(--card) 92%, var(--bg));
+  border: 1px solid var(--line);
+  color: var(--ink);
+  border-top-right-radius: 4px;
+}
+
+.ai-message-row.user .ai-msg-bubble {
+  background: linear-gradient(135deg, var(--ac), color-mix(in srgb, var(--ac) 80%, #059669));
+  color: #fff;
+  border-top-left-radius: 4px;
+}
+
+.ai-msg-text p {
+  margin: 0 0 8px;
+  color: inherit;
+}
+.ai-msg-text p:last-child {
+  margin-bottom: 0;
+}
+
+.ai-msg-text ul,
+.ai-msg-text ol {
+  margin: 6px 0 10px;
+  padding-inline-start: 1.3em;
+}
+
+.ai-msg-text li {
+  margin-bottom: 4px;
+}
+
+.ai-msg-text strong {
+  color: inherit;
+  font-weight: 700;
+}
+
+/* أزرار الإجراءات السريعة داخل إجابة الذكاء الاصطناعي */
+.ai-msg-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+}
+
+.ai-action-link-btn {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 99px;
+  background: color-mix(in srgb, var(--ac) 12%, var(--card));
+  color: var(--ac);
+  border: 1px solid color-mix(in srgb, var(--ac) 30%, transparent);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.15s ease;
+}
+
+.ai-action-link-btn:hover {
+  background: var(--ac);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* مؤشر الكتابة للذكاء الاصطناعي */
+.typing-dots {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 2px;
+}
+
+.typing-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--ac);
+  border-radius: 50%;
+  animation: typingBounce 1.4s infinite ease-in-out both;
+}
+
+.typing-dot:nth-child(1) { animation-delay: -0.32s; }
+.typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes typingBounce {
+  0%, 80%, 100% { transform: scale(0); opacity: 0.4; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+/* شريط الإدخال السفلي */
+.ai-chat-input-bar {
+  padding: 12px 14px;
+  background: var(--card);
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ai-chat-input {
+  flex: 1;
+  font: inherit;
+  font-size: 0.88rem;
+  padding: 9px 14px;
+  background: color-mix(in srgb, var(--card) 90%, var(--bg));
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  color: var(--ink);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.ai-chat-input:focus {
+  border-color: var(--ac);
+  background: var(--card);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ac) 20%, transparent);
+}
+
+.ai-send-btn {
+  font: inherit;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: var(--ac);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.ai-send-btn:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--ac) 85%, #059669);
+  transform: scale(1.06);
+}
+
+.ai-send-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* استجابة الشاشات الصغيرة للموبايل */
+@media (max-width: 600px) {
+  .ai-fab-container {
+    bottom: 16px;
+    inset-inline-start: 16px;
+  }
+  .ai-chat-window {
+    bottom: 0;
+    inset-inline-start: 0;
+    width: 100vw;
+    max-width: 100vw;
+    height: 90vh;
+    max-height: 90vh;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}

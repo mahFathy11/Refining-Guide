@@ -1,0 +1,6 @@
+# robots.txt for chem-tracks
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://chem-tracks.com/sitemap.xml

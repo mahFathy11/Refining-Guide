@@ -1,0 +1,351 @@
+{
+  "found": {
+    "title": "الأساسيات المشتركة",
+    "stageOne": {
+      "title": "موازين المادة والطاقة",
+      "links": {
+        "materialBalance": "https://www.youtube.com/playlist?list=PLx5Lfrzxi7Al43qB8I9oNEF_1tVPJQ6LU",
+        "energyBalance": "https://www.youtube.com/playlist?list=PLx5Lfrzxi7AlDFfoD0nc4XBJbIWgaxRzW"
+      }
+    },
+    "stageTwo": {
+      "title": "الديناميكا الحرارية",
+      "links": {
+        "mitThermoNormal": "https://www.mediafire.com/folder/yb85f6a8v5f0u/TGC_-_Thermodynamic",
+        "mitThermoHq": "https://www.mediafire.com/folder/dnzsos0s8v6ai/TGC_-_Thermodynamic_-_HQ",
+        "thermoModel": "https://www.youtube.com/watch?v=qWVo6hpE6jo",
+        "thermoSelectionBook": "https://www.mediafire.com/file/q71ztty4m274q1r/Hemptinne_de%252C_Jean-Charles__Ledanois%252C_Jean-Marie%252C_Mougin%252C_Pascal__Barreau%252C_Alain_-_Select_Thermodynamic_Models_for_Process_Simulation_-_A_Practical_Guide_Using_a_Three_Steps_Methodology-Editions_Techn.pdf/file"
+      }
+    },
+    "stageThree": {
+      "title": "الموائع وانتقال الحرارة والكتلة",
+      "links": {
+        "fluidMech": "https://www.youtube.com/playlist?list=PLGFJoiBHrw9fSLURY4F6jn5lnJ95AzfcE",
+        "heatTransfer": "https://www.youtube.com/playlist?list=PLPCaTW8BzRKxO1LZRre1sH1AGmeW3bmgZ",
+        "massTransfer": "https://www.youtube.com/playlist?list=PLGED90Y_uL1IMEMmqzbV0VdzBPh-jfxC1",
+        "plantFluids": "https://drive.google.com/drive/mobile/folders/14p014eVwt-ZphVU_f7FXJ_Mzysd_LVFz/1xR64Ttb3jvKCF1yQGrW_1tXmLpyi5VHn"
+      }
+    }
+  },
+  "design": {
+    "title": "Process Design Engineer",
+    "stageOne": {
+      "title": "قراءة الرسومات",
+      "links": {
+        "dwgAyat": "https://www.youtube.com/playlist?list=PLGFJoiBHrw9e1Xvls-Re1cJr0lnsFI_1z",
+        "dwgDiaa": "https://www.youtube.com/playlist?list=PLGFJoiBHrw9f3LdOU397gLvyfAzBOvM2o",
+        "pidShady": "https://youtu.be/lcIzxA9f3D8",
+        "pidMai": "https://www.youtube.com/playlist?list=PL_iwR-v09NVOzmj-BeQtsYB4GG_omyVsY",
+        "pidBookKarim": "https://drive.google.com/drive/mobile/folders/1M72S3jswODKKUUsKlOei92yHGD7WilcA",
+        "autocadPid": "https://www.youtube.com/playlist?list=PLGjpLFWojUcqO83nptkWXOVcO_ukc4jP6",
+        "pidCbi": "https://docs.google.com/presentation/d/1edkCYC2-BQ0Oo4IDNLF7PiqmHkj7QVhM/edit?usp=drivesdk&ouid=109719394520443481050&rtpof=true&sd=true"
+      }
+    },
+    "stageTwo": {
+      "title": "مراحل المشروع",
+      "links": {}
+    },
+    "stageThree": {
+      "title": "مراجع التصميم",
+      "links": {
+        "nptelDesign": "https://nptel.ac.in/courses/103105210",
+        "processDesignManual": "https://drive.google.com/drive/folders/1tTfREq_BrFNeS7_efn8uwzENIHnJVJgE",
+        "rulesOfThumbBook": "https://www.mediafire.com/file/7j6y040g78q76qa/Rules_of_Thumb_for_Chemical_Engineers%252C_Carl_Branan.pdf/file",
+        "gaberRulesOfThumb": "https://youtu.be/F9q8VyBvBxs",
+        "processSizingCriteria": "https://drive.google.com/file/d/1ux3OwiVE2xo4t1-FJxsCyzgm1wC6G1Sl/view"
+      }
+    },
+    "stageFour": {
+      "title": "الهيدروليكا والأكواد",
+      "links": {
+        "sizingLiquid": "https://youtu.be/F3R_Cz8ExY0",
+        "flowMeasuring": "https://www.youtube.com/playlist?list=PLGIY5FS8WA8poKZRU85h21U1jmN4Q9wba",
+        "kolmetzPiping": "https://drive.google.com/file/d/1kKJiZX9Y6w3ZeJQc7ZoS2BCO5D7q7uVV/view",
+        "codeCalc": "https://www.codecalculation.com/calculations/"
+      }
+    }
+  },
+  "equip": {
+    "title": "Equipment Engineer",
+    "stageOne": {
+      "title": "الأنابيب والمضخات",
+      "links": {
+        "pipingIntro": "https://drive.google.com/file/d/132Cm_nGdeO-G8lN1-8wzwfzR9YTS2L77/view",
+        "pipingMech": "https://drive.google.com/file/d/1mG6uFFs83erL_Xi6_F7yIJJuVpgzeSsN/view?usp=drivesdk",
+        "pipingAmer": "https://drive.google.com/drive/u/0/mobile/folders/1nNZF2QNky5iXcMIxBqDVcW9KNXaWGrlC/1SB4jvNobQjotAPoy-DTdE7DxZfV1WKKs?sort=13&direction=a",
+        "valvesAmer": "https://youtu.be/dAZRiJOGIhI",
+        "valvesMai": "https://www.youtube.com/playlist?list=PL_iwR-v09NVMnffFtT4TzYZp6lsoLUjkY",
+        "pumps1": "https://www.youtube.com/playlist?list=PLGFJoiBHrw9dTk2Ri4PiXDAuOrWacofhD",
+        "pumps2": "https://www.youtube.com/playlist?list=PLGIY5FS8WA8o9_cSTOehQa95j2yLkbpdo",
+        "pumps3": "https://www.youtube.com/playlist?list=PLRKcHnkA6shfN9KVyRZ7zuBM_VQfSdBhL",
+        "pumpCalc": "https://www.youtube.com/playlist?list=PLGFJoiBHrw9dAdmxJeeD2MRUekErSg0Wx",
+        "pumpSim": "https://www.youtube.com/playlist?list=PLRKcHnkA6shfHGtQEG49-NfALLOoqhLFy",
+        "plantPumps": "https://drive.google.com/drive/mobile/folders/14p014eVwt-ZphVU_f7FXJ_Mzysd_LVFz/1VIBl_lltLOBasJr41q7aThmSO6ShE_uP",
+        "plantValves": "https://drive.google.com/drive/mobile/folders/14p014eVwt-ZphVU_f7FXJ_Mzysd_LVFz/1fJpoKseC7PrwCvLpFBw94uW-VVN-G5WJ"
+      }
+    },
+    "stageTwo": {
+      "title": "الضواغط والتوربينات",
+      "links": {
+        "comp1": "https://www.youtube.com/playlist?list=PLGIY5FS8WA8oMkBM7de13c89zft9FCpfb",
+        "comp2": "https://www.youtube.com/playlist?list=PLRKcHnkA6shfN9KVyRZ7zuBM_VQfSdBhL",
+        "compCalc": "https://www.youtube.com/playlist?list=PLGFJoiBHrw9eJxNAJE2NZXmQ8AJ4tcp2B",
+        "compSimMokhtar": "https://youtu.be/6Wh0-oh1WI4",
+        "turboexpanderPost": "https://www.facebook.com/groups/111405475589964/posts/3161576107239537/",
+        "gasTurbines": "https://www.youtube.com/playlist?list=PLlfRz0jWfpBqlrPa45ZZ87t5JXMYA8tDt",
+        "pumpsCompressorsCourse": "https://drive.google.com/drive/folders/1EYyxTCtX-24klSWyo39Y7GkJHWMJTYQw",
+        "compressorCourseDrive": "https://drive.google.com/drive/folders/1H1-R2JgUCFDsAwabl9ndrAgMfgpWEo8l",
+        "plantCompressors": "https://drive.google.com/drive/mobile/folders/14p014eVwt-ZphVU_f7FXJ_Mzysd_LVFz/1-mQHNJr0VmEJwS209ASADJUiTCZENk4W",
+        "plantTurbines": "https://drive.google.com/drive/mobile/folders/14p014eVwt-ZphVU_f7FXJ_Mzysd_LVFz/1rsgQahAbpsdWvjpWCbUiJjmvqcJKf63K"
+      }
+    },
+    "stageThree": {
+      "title": "المبادلات والأفران",
+      "links": {
+        "stOverview": "https://www.youtube.com/playlist?list=PLnGABChcaeJggCGpEs6bRJjLRrIE7WG7O",
+        "stDesignAyat": "https://www.youtube.com/playlist?list=PLGFJoiBHrw9ex8bjJJiD7XummNrsWF399",
+        "stDesignAzzam": "https://www.youtube.com/playlist?list=PLGFJoiBHrw9fWFTGovQ0k4jPJmYcBrwql",
+        "stAspenPlus": "https://www.youtube.com/playlist?list=PLGFJoiBHrw9dlrlERtLmEd8kYS2rbgQ97",
+        "edrIntro": "https://youtu.be/3xQAcF7ZxLI",
+        "edrDesign": "https://youtu.be/Yz1xemF0Pfc",
+        "hxCleaning": "https://youtu.be/BBYZiXmoS78",
+        "airCoolers": "https://youtu.be/2PHJHxAT1EE",
+        "airCoolerEdr": "https://youtu.be/qk8JoIASMzM",
+        "plateHx": "https://youtu.be/7TTF4aU3Pcs",
+        "plateHxEdr": "https://youtu.be/5fVdueuRZ1o",
+        "firedHeaterCourse": "https://www.youtube.com/playlist?list=PL8sQItRqmKcrmskN06RcUnNY4Itx2iaEm",
+        "firedHeaterApi": "https://youtu.be/cmf-2B3H_zA",
+        "firedHeaterEff": "https://youtu.be/XuF2megXVN4",
+        "firedHeaterHysys": "https://youtu.be/bc-5EPuTgl8",
+        "api560": "https://www.youtube.com/playlist?list=PL27MKMxcGhi9tyxSGWkjRCTivSF4bkrJ4",
+        "plantExchangers": "https://drive.google.com/drive/mobile/folders/14p014eVwt-ZphVU_f7FXJ_Mzysd_LVFz/1SCzq3FKrUWi-OaN51xcNPNCFCBHn-6pf",
+        "plantHeat": "https://drive.google.com/drive/mobile/folders/14p014eVwt-ZphVU_f7FXJ_Mzysd_LVFz/1Cz3TCx_4zoUgMKzhh455SW583fp4jSrn"
+      }
+    },
+    "stageFour": {
+      "title": "المرافق",
+      "links": {
+        "boilers": "https://www.youtube.com/playlist?list=PLc3dsG9JU-uioFqeh4oXk7N9dUugbskFL",
+        "coolingTowerDesign": "https://www.youtube.com/playlist?list=PLGFJoiBHrw9cQHKOaGrf2tN96ccHE9Kqq",
+        "utilitiesFull": "https://www.youtube.com/playlist?list=PLLy_2iUCG87DtARSWi7I8Q7kLMZGuKuxN"
+      }
+    },
+    "stageFive": {
+      "title": "الفصل",
+      "links": {
+        "separatorsTypes": "https://youtu.be/eXyLpZ8WwI4",
+        "separatorSizing": "https://youtu.be/5C6GoOhm_9U",
+        "separatorHelmy": "https://drive.google.com/drive/folders/151I0kiZDpixdghJOBhZ7QWWbTGSrMjap",
+        "separatorKbr": "https://www.linkedin.com/posts/ahmed-gamal-14848618b_seperation-activity-6975752175318654976-leDf?utm_source=share&utm_medium=member_android",
+        "sepSimModel": "https://drive.google.com/file/d/1zIgdOoc2jHGM6emKVbN_iwMHsSAfaWFG/view?usp=drivesdk",
+        "sepSimCase": "https://drive.google.com/file/d/1atXPe3FPVJ7aEQ3bQJTLrb3sK-S6TlBI/view?usp=drivesdk",
+        "distTheory": "https://youtu.be/xn8q8cwXSwE",
+        "distAcademic": "https://www.youtube.com/playlist?list=PLGFJoiBHrw9dFyUCjGHrc3MWNN7PJkKjM",
+        "distChevron": "https://youtu.be/ZbY7hdm2WKg",
+        "distEnglish": "https://youtu.be/ex_hScKbYhM",
+        "distStages": "https://youtu.be/lqNOd7VLioo",
+        "distHysys": "https://www.youtube.com/playlist?list=PLUtRFpyY1F_TK58bCCt3UgdBxneSvQwHe",
+        "distTrays": "https://youtu.be/4b4olsIyB-g",
+        "plantDistillation": "https://drive.google.com/drive/mobile/folders/14p014eVwt-ZphVU_f7FXJ_Mzysd_LVFz/1JR1Qb22FFbFSBDUwvWgjkLXyobD--SHs",
+        "absorption1": "https://www.youtube.com/playlist?list=PLGFJoiBHrw9fdsxsMQPlQeN2ddXibcFMr",
+        "absorption2": "https://www.youtube.com/playlist?list=PLGFJoiBHrw9cu_s3_V9s382XHK3oMZO-R",
+        "gasSweetening": "https://youtu.be/nIaK2glp2-A",
+        "gasDehydration": "https://youtu.be/HqSWgR8YpDA",
+        "absorptionNptel": "https://www.youtube.com/playlist?list=PLGFJoiBHrw9cWJ6WJ_K2j9laAbJ2qOreu"
+      }
+    }
+  },
+  "sim": {
+    "title": "Process Simulation (HYSYS / Aspen Plus)",
+    "stageOne": {
+      "title": "المدخل",
+      "links": {
+        "hysysMokhtar": "https://www.youtube.com/playlist?list=PLUtRFpyY1F_TK58bCCt3UgdBxneSvQwHe"
+      }
+    },
+    "stageTwo": {
+      "title": "التعمق",
+      "links": {
+        "aspenChem": "https://drive.google.com/drive/folders/1w3fB_Il3rBUQBFP9LgYgpkThVryIA0eQ",
+        "aspenGas": "https://drive.google.com/drive/folders/1jWc-PqSx0EvIExj8BrvJeHGK4kVeCeVO",
+        "aspenRefinery": "https://drive.google.com/drive/folders/1BuOD3pTZVVR72vbr1f2rLgRdHN8xQn9o",
+        "aspenAdvanced": "https://drive.google.com/drive/folders/1ulafvvzyATq9bWhuCb6UhHTMZ1BuJwkB",
+        "aspenDynamic": "https://drive.google.com/drive/folders/1M_SJczanlMEycOcG213lQgfstLczQvTd",
+        "aspenTrainIntro": "https://drive.google.com/drive/folders/10MZRJ_l5mlE_dhsyBWriDw9B-zjOlUsb",
+        "aspenTrainMB": "https://drive.google.com/drive/folders/1NwSo9-ipKpK_n_TC0odl8eOFWeESOHgt",
+        "aspenTrainThermo": "https://drive.google.com/drive/folders/18KIvcptmgzRW7JbP20rXuFKSvc2_ISdd",
+        "aspenTrainReactors": "https://drive.google.com/drive/folders/1dMh4p6cwhXgO9Nq7b4L4383v5n_m8vj5",
+        "aspenTrainDist": "https://drive.google.com/drive/folders/1T563914eR1LgX58_n_dD6xK1oUj9a79M",
+        "aspenTrainDesign": "https://drive.google.com/drive/folders/15L3z_jT_tQ2b-4K-d45kR2l_1dF6E7gH",
+        "aspenPlusIntro": "https://www.youtube.com/playlist?list=PLGED90Y_uL1J740hV8Vti0zZz3pZsT14S",
+        "aspenPlusNptel": "https://nptel.ac.in/courses/103/103/103103209/",
+        "aspenDownloadlyStarted": "https://downloadly.ir/elearning/video-tutorials/aspen-plus-getting-started/",
+        "aspenDownloadlyInter": "https://downloadly.ir/elearning/video-tutorials/aspen-plus-intermediate-process-modeling/",
+        "aspenDownloadlyBootcamp": "https://downloadly.ir/elearning/video-tutorials/bootcamp-aspen-plus-with-case-studies/",
+        "aspenOptDrive": "https://drive.google.com/file/d/13gAPZmsJrCXRx8GmpVblO4qe1X3_jLVY/view?usp=drivesdk"
+      }
+    },
+    "stageThree": {
+      "title": "الشهادات ونماذج الامتحانات",
+      "links": {
+        "acuSteps": "https://youtu.be/HOtJ8x9cqTs",
+        "aspentechUni": "https://esupport.aspentech.com/UniversityCourse?id=a3p4P000000kpXQQAY",
+        "colStudy": "https://www.youtube.com/playlist?list=PLGFJoiBHrw9fkqt0hQUXQKf3IPmgfnZdm",
+        "examBankMega": "https://mega.nz/folder/Gl90UDZL#6MIzl3KnaUINiqUpfhpKTw",
+        "examBankMega2": "https://mega.nz/folder/apkymAJD#iXHEMWzTLh1jmGGRF69GcQ",
+        "examSampleUpstream": "https://pdfcoffee.com/qdownload/ehy2351-aspen-hysys-upstream-4-pdf-free.html"
+      }
+    }
+  },
+  "ops": {
+    "title": "Operations / Production Engineer",
+    "stageOne": {
+      "title": "فهم المصنع",
+      "links": {
+        "chemFieldsShafik": "https://www.youtube.com/playlist?list=PLJX-3-8cbm2V8gOnWza0VqgANvIr1suHM",
+        "adviceYehia": "https://youtu.be/4Ret-jQj1rw",
+        "shafikDiploma": "https://www.youtube.com/playlist?list=PL1ZEXabVLMmXpUuUkyg9ZSVJszMG_NMu3",
+        "processTechnologyBook": "https://drive.google.com/file/d/1_zDiTschd9jFT19XOTCnVw6wlUNRR7Og/view",
+        "ihrdc": "https://www.ihrdc.com/"
+      }
+    },
+    "stageTwo": {
+      "title": "التحكم والأجهزة",
+      "links": {
+        "instrIndian": "https://www.youtube.com/playlist?list=PLvOh309NvHlFBcbXApZMCz9i0f1f8K-ra",
+        "instrMoataz": "https://www.youtube.com/playlist?list=PLGFJoiBHrw9cpoNdCwxgPalKUY_7Z8DqO",
+        "instrLight": "https://www.youtube.com/playlist?list=PLGFJoiBHrw9d76F0IqVO29mDhzrw0sZUv",
+        "controlIsmail1": "https://www.youtube.com/playlist?list=PLBajgtqPAZzC2j33poh8wY2UWXbAwQX2W",
+        "controlIsmail2": "https://www.youtube.com/playlist?list=PLBajgtqPAZzB3CY5Guk8y_A8Fnf0HpS8v",
+        "dcsPost": "https://www.facebook.com/groups/111405475589964/posts/3189967227733758/",
+        "plantInstrumentation": "https://drive.google.com/drive/mobile/folders/14p014eVwt-ZphVU_f7FXJ_Mzysd_LVFz/1MWQ3JaaEUZ-BdZpDRvw6jrUwujwsBJU8",
+        "cePractice": "https://chemicalengineeringpractice.org/",
+        "cePracticeYT": "https://www.youtube.com/playlist?list=PLfGAySG9GXHMWApafYj5wb-hD6Jczh-LO",
+        "processControlIhab": "https://youtu.be/dxMFjqqscvw"
+      }
+    },
+    "stageThree": {
+      "title": "كيمياء التغذية والمشاكل",
+      "links": {
+        "scaleDrMostafa": "https://youtu.be/yW2T9G4fH0o",
+        "scaleDrWael": "https://youtu.be/mF8bWbV-tE4",
+        "waterBookDrMostafa": "https://drive.google.com/file/d/1_V4e9Z_9aQz8v9o2h7y6z5b4c3d2e1f0/view",
+        "desalination": "https://youtu.be/1m3m0k8p7kE",
+        "waterTreatment1": "https://youtu.be/y9T4s7x9u8A",
+        "waterTreatment2": "https://youtu.be/o3V8Z7n6v4s"
+      }
+    },
+    "stageFour": {
+      "title": "أنظمة إضافية",
+      "links": {
+        "nitrogenPost": "https://www.facebook.com/groups/111405475589964/posts/3161576107239537/",
+        "nitrogenBasics": "https://youtu.be/4e9w8q8r4t8",
+        "amineUnit": "https://youtu.be/qW8e0r6t7y9",
+        "troubleshooting": "https://youtu.be/0p8r9y6u7v5",
+        "pfdBook": "https://drive.google.com/file/d/17y8u9i0o1p2a3s4d5f6g7h8j9k0l1m2/view"
+      }
+    }
+  },
+  "safety": {
+    "title": "Process Safety Engineer (HSE / PSM)",
+    "stageOne": {
+      "title": "الأساسيات واللوائح",
+      "links": {
+        "psmIntroAmer": "https://youtu.be/Yp0H0n7gYmE",
+        "psmNptel": "https://www.youtube.com/playlist?list=PLGFJoiBHrw9f6-1w4h5e1b2c3d4e5f6g7",
+        "psmHazards": "https://youtu.be/2w3e4r5t6y7",
+        "ccpsBook": "https://drive.google.com/file/d/10a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6/view",
+        "osha1910": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.119",
+        "psmIntroAmmar": "https://youtu.be/JvO3yrCH5EA"
+      }
+    },
+    "stageTwo": {
+      "title": "تحليل الحوادث",
+      "links": {
+        "psmTexas1": "https://youtu.be/goSEJuWnmt4",
+        "psmTexas2": "https://youtu.be/D_n21_Vq1rA",
+        "psmDeepwater": "https://youtu.be/FCVCOOCTiUM",
+        "psmEsso1": "https://youtu.be/WzCgD4Y0q8I",
+        "psmEsso2": "https://youtu.be/8o_mUuT9hJk",
+        "psmPortNeal": "https://youtu.be/1m2n3o4p5q6",
+        "psmPiper": "https://youtu.be/Qc1p9e6Yg8A",
+        "psmPartridge": "https://youtu.be/3f7g8h9j0k1",
+        "psmPartridgeAr": "https://youtu.be/4g8h9j0k1l2",
+        "psmFormosa": "https://youtu.be/5h9j0k1l2m3",
+        "psmFlixborough": "https://youtu.be/6j0k1l2m3n4",
+        "psmSandoz": "https://youtu.be/7k1l2m3n4o5",
+        "psmExxonValdez": "https://youtu.be/8l2m3n4o5p6",
+        "psmBhopal": "https://youtu.be/9m3n4o5p6q7",
+        "psmMacondo": "https://youtu.be/0n4o5p6q7r8"
+      }
+    }
+  },
+  "rpg": {
+    "title": "تكرير / غاز / بتروكيماويات",
+    "stageOne": {
+      "title": "التكرير",
+      "links": {
+        "refiningVideo": "https://www.youtube.com/watch?v=Xs84kGGi9LQ",
+        "sruAyman": "https://youtu.be/UtM3dsEW1eo",
+        "hydrocrackingNokira": "https://youtu.be/7QLAa13-PtM",
+        "acidGasTreatmentSalim": "https://youtu.be/wSOoW3qS0xI"
+      }
+    },
+    "stageTwo": {
+      "title": "الغاز والزيت",
+      "links": {
+        "spe": "https://www.youtube.com/playlist?list=PLEGBFk6Q1JYUvDmQUB4YV1jv73KMvi5_O",
+        "shadyOG": "https://www.youtube.com/playlist?list=PLWizASkkbIXiqO9L6PEGSRc0r_tK0p2rJ",
+        "amerOG": "https://www.youtube.com/playlist?list=PL-NctYVJr6FHBRn0HKsqpf3s2NBbkubX-",
+        "gasIntroAbdullah": "https://youtu.be/3nb3OUIrG8o",
+        "gasSweeteningAyman": "https://youtu.be/TybArA69tEg",
+        "gasDehydrationAttia": "https://youtu.be/kVnCW9KDVhA",
+        "nglRecoveryAmmar": "https://youtu.be/_K6MWSRczJk",
+        "lngProductionMahdy": "https://youtu.be/Z-7X50e4u3c",
+        "crudePostSami": "https://www.facebook.com/groups/111405475589964/posts/3328803273850152/",
+        "khaledCrude": "https://www.youtube.com/playlist?list=PLUXankhnFypG5NiigijfUIfzv6pPKdlN2",
+        "crudeBookPost": "https://www.facebook.com/groups/111405475589964/posts/2166898263373998/"
+      }
+    },
+    "stageThree": {
+      "title": "بتروكيماويات وأسمدة",
+      "links": {
+        "petrochemicalsHandbook": "https://drive.google.com/file/d/13GMKXpQ-zFzl3NQ8_HfgccW3lGk33Cy6/view",
+        "petrochemRehab": "https://youtu.be/J-kwzocetIg"
+      }
+    }
+  },
+  "corr": {
+    "title": "Corrosion / Inspection",
+    "stageOne": {
+      "title": "المصادر الموجودة",
+      "links": {
+        "corrosionPetrochem": "https://drive.google.com/file/d/1-ikODJwyZAN-FLDwAVN3RsMmnHaXsNbu/view",
+        "corrosionPost": "https://www.facebook.com/groups/111405475589964/posts/4643519495711850/",
+        "corrosionPath": "https://www.facebook.com/groups/111405475589964/posts/2616296168434203/"
+      }
+    }
+  },
+  "career": {
+    "title": "مهارات التوظيف",
+    "stageOne": {
+      "title": "قبل التقديم",
+      "links": {
+        "fieldsYehia": "https://youtu.be/YdH5IbEyg1E",
+        "interviewPrepBook": "https://drive.google.com/file/d/1boglvo2PVYQVa1wyaEaFQ363oER1hgFJ/view",
+        "technicalQuestionsDawood": "https://drive.google.com/file/d/1HebO78zyH2udPnyiaiArW9ViFc8QtGuQ/view?usp=drive_link",
+        "zatonaCheme": "https://drive.google.com/file/d/1xB31tP21DlWkDh-UoxXVNL0egOqcWkle/view?usp=drive_link"
+      }
+    },
+    "stageTwo": {
+      "title": "المهارات",
+      "links": {
+        "wordCourse": "https://www.youtube.com/playlist?list=PLH-n8YK76vIiiy0rdpbMQae9RT9lnFMSd",
+        "pptCourse": "https://www.youtube.com/playlist?list=PLH-n8YK76vIjkwjHUVxw_THMnMTXv3p1g",
+        "excelCourse": "https://www.youtube.com/playlist?list=PLH-n8YK76vIizh3yHwsWtDXu8CXOnrNbI",
+        "excelChem": "https://www.youtube.com/watch?v=hhiSyuRcIUk&list=PL1F738FB77FA53E98",
+        "formalEmailWriting": "https://www.mediafire.com/file/5a0i5icl9yl9q5s/Formal_Email_Writing_Tutorial.rar/file"
+      }
+    }
+  }
+}

@@ -1,0 +1,1198 @@
+/* ========================================================
+   أنماط المصادقة وتسجيل الدخول والملف الشخصي للمهندس
+   (Authentication & User Profile Styles)
+   ======================================================== */
+
+/* صفحة تسجيل الدخول والترحيب الكاملة */
+.login-page-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  background: 
+    radial-gradient(circle at 10% 20%, color-mix(in srgb, var(--ac) 12%, transparent) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, color-mix(in srgb, var(--ok) 8%, transparent) 0%, transparent 40%),
+    var(--bg);
+}
+
+.login-container {
+  width: 100%;
+  max-width: 1020px;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+/* بطاقة تسجيل الدخول البسيطة والمركزة */
+.login-simple-card {
+  width: 100%;
+  max-width: 440px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: clamp(24px, 4vw, 36px);
+  box-shadow: 0 20px 48px rgba(15, 23, 42, 0.08);
+  margin: 0 auto;
+  animation: fadeInCard 0.25s ease-out;
+}
+
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-card-header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.login-brand-icon {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.login-card-header h2 {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0 0 6px;
+}
+
+.login-card-desc {
+  font-size: 0.88rem;
+  color: var(--mut);
+  margin: 0;
+  line-height: 1.55;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  inset-inline-end: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.05rem;
+  padding: 4px;
+  color: var(--mut);
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.15s ease;
+}
+
+.password-toggle-btn:hover {
+  opacity: 0.7;
+}
+
+.login-security-notice {
+  margin-top: 18px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--ac) 6%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--ac) 18%, transparent);
+  font-size: 0.76rem;
+  color: var(--mut);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.45;
+}
+
+/* جانب العرض والمميزات (Hero Side) */
+.login-hero-side {
+  position: relative;
+  background-image: 
+    linear-gradient(
+      155deg, 
+      rgba(9, 18, 34, 0.86) 0%, 
+      rgba(11, 22, 42, 0.91) 55%, 
+      rgba(15, 23, 42, 0.96) 100%
+    ),
+    url('/bg-login.png');
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 22px;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  color: #f8fafc;
+  overflow: hidden;
+}
+
+.login-hero-side::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--ac), var(--ok));
+}
+
+.hero-brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #38bdf8;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 5px 14px;
+  border-radius: 99px;
+  margin-bottom: 14px;
+  width: fit-content;
+}
+
+.hero-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  line-height: 1.35;
+  color: #ffffff;
+  margin: 0 0 12px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+  font-size: 0.96rem;
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin: 0 0 24px;
+}
+
+.hero-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.hero-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 12px 14px;
+  border-radius: 14px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.hero-feature-item:hover {
+  transform: translateX(-3px);
+  border-color: var(--ac);
+}
+
+.feature-icon-circle {
+  font-size: 1.35rem;
+  background: color-mix(in srgb, var(--ac) 14%, var(--card));
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.feature-item-text strong {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+
+.feature-item-text p {
+  font-size: 0.82rem;
+  color: var(--mut);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.hero-bottom-quote {
+  font-size: 0.82rem;
+  color: var(--mut);
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* جانب بطاقة تسجيل الدخول وإنشاء الحساب (Form Side) */
+.login-form-side {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 32px 28px;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+/* التبديل بين الدخول والتسجيل */
+.auth-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: color-mix(in srgb, var(--card) 70%, var(--bg));
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 4px;
+  margin-bottom: 22px;
+  gap: 4px;
+}
+
+.auth-tab-btn {
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 700;
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  color: var(--mut);
+  border-radius: 9px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.auth-tab-btn.active {
+  background: var(--card);
+  color: var(--ac);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* تنبيه الخطأ */
+.auth-alert-error {
+  background: color-mix(in srgb, #ef4444 12%, var(--card));
+  color: #ef4444;
+  border: 1px solid color-mix(in srgb, #ef4444 30%, transparent);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 0.86rem;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: shakeAlert 0.3s ease;
+}
+
+@keyframes shakeAlert {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+/* مجموعات الحقول */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-field label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.field-icon {
+  position: absolute;
+  inset-inline-start: 12px;
+  color: var(--mut);
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+.form-input,
+.form-select {
+  width: 100%;
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 9px 12px;
+  padding-inline-start: 36px;
+  background: color-mix(in srgb, var(--card) 90%, var(--bg));
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--ink);
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.form-input:focus,
+.form-select:focus {
+  border-color: var(--ac);
+  background: var(--card);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ac) 20%, transparent);
+}
+
+.form-select {
+  cursor: pointer;
+  padding-inline-start: 12px;
+}
+
+/* اختيار الأيقونة الرمزية */
+.avatar-picker-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+
+.avatar-grid {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.avatar-opt-btn {
+  font-size: 1.3rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--card) 85%, var(--bg));
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.avatar-opt-btn:hover {
+  transform: scale(1.1);
+  border-color: var(--ac);
+}
+
+.avatar-opt-btn.selected {
+  border-color: var(--ac);
+  background: color-mix(in srgb, var(--ac) 18%, var(--card));
+  box-shadow: 0 0 0 2px var(--ac);
+}
+
+/* أزرار الإجراءات */
+.auth-submit-btn {
+  font: inherit;
+  font-size: 0.96rem;
+  font-weight: 700;
+  padding: 11px 18px;
+  border-radius: 11px;
+  border: none;
+  background: linear-gradient(135deg, var(--ac), color-mix(in srgb, var(--ac) 75%, #059669));
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--ac) 35%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.auth-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--ac) 45%, transparent);
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0 14px;
+  color: var(--mut);
+  font-size: 0.78rem;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.guest-btn {
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 9px 14px;
+  border-radius: 10px;
+  border: 1px dashed var(--line);
+  background: color-mix(in srgb, var(--card) 80%, var(--bg));
+  color: var(--mut);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.guest-btn:hover {
+  border-color: var(--ac);
+  color: var(--ac);
+  background: color-mix(in srgb, var(--ac) 6%, var(--card));
+}
+
+/* الحسابات المسجلة مسبقاً على هذا الجهاز */
+.saved-accounts-box {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.saved-accounts-title {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--mut);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.saved-accounts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.saved-account-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--card) 85%, var(--bg));
+  border: 1px solid var(--line);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.saved-account-row:hover {
+  border-color: var(--ac);
+  background: color-mix(in srgb, var(--ac) 8%, var(--card));
+}
+
+.saved-account-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.saved-account-avatar {
+  font-size: 1.15rem;
+}
+
+.saved-account-name {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.saved-account-action {
+  font-size: 0.74rem;
+  color: var(--ac);
+  font-weight: 600;
+}
+
+/* ========================================================
+   بانر متابعة المسار الخاص بالمهندس في الصفحة الرئيسية
+   (Personalized User Track Banner on Home Page)
+   ======================================================== */
+.user-track-banner {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--ac) 12%, var(--card)), var(--card));
+  border: 1px solid color-mix(in srgb, var(--ac) 30%, var(--line));
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin: 18px 0 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.user-track-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  width: 5px;
+  height: 100%;
+  background: var(--ac);
+}
+
+.banner-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.banner-user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.banner-user-avatar {
+  font-size: 2.2rem;
+  width: 52px;
+  height: 52px;
+  background: color-mix(in srgb, var(--ac) 14%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--ac) 30%, transparent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.banner-user-greeting {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0;
+}
+
+.banner-user-role {
+  font-size: 0.8rem;
+  color: var(--mut);
+  margin: 0;
+}
+
+.banner-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.target-track-badge {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 99px;
+  background: color-mix(in srgb, var(--ac) 15%, var(--card));
+  color: var(--ac);
+  border: 1px solid color-mix(in srgb, var(--ac) 35%, transparent);
+}
+
+.progress-pct-badge {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 99px;
+  background: color-mix(in srgb, var(--ok) 15%, var(--card));
+  color: var(--ok);
+  border: 1px solid color-mix(in srgb, var(--ok) 35%, transparent);
+}
+
+.banner-progress-box {
+  margin: 12px 0 16px;
+}
+
+.progress-labels-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: var(--mut);
+  margin-bottom: 6px;
+}
+
+.progress-bar-track {
+  width: 100%;
+  height: 9px;
+  background: var(--line);
+  border-radius: 99px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--ac), var(--ok));
+  border-radius: 99px;
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.banner-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-resume-track {
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 7px 16px;
+  border-radius: 99px;
+  background: var(--ac);
+  color: #fff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--ac) 30%, transparent);
+}
+
+.btn-resume-track:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--ac) 45%, transparent);
+}
+
+.btn-profile-stats {
+  font: inherit;
+  font-size: 0.84rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 99px;
+  background: color-mix(in srgb, var(--card) 85%, var(--bg));
+  border: 1px solid var(--line);
+  color: var(--ink);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-profile-stats:hover {
+  border-color: var(--ac);
+  color: var(--ac);
+}
+
+/* ========================================================
+   زر الحساب في الهيدر (User Nav Chip)
+   ======================================================== */
+.user-nav-chip {
+  font: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px 4px 8px;
+  border-radius: 99px;
+  background: color-mix(in srgb, var(--ac) 8%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--ac) 25%, transparent);
+  cursor: pointer;
+  color: var(--ink);
+  transition: all 0.2s ease;
+  margin-inline-start: 4px;
+}
+
+.user-nav-chip:hover {
+  background: color-mix(in srgb, var(--ac) 15%, var(--card));
+  border-color: var(--ac);
+  transform: translateY(-1px);
+}
+
+.user-chip-avatar {
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+}
+
+.user-chip-name {
+  font-size: 0.84rem;
+  font-weight: 700;
+  max-width: 110px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-chip-pct {
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 99px;
+  background: var(--ac);
+  color: #fff;
+}
+
+.header-login-link {
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 99px;
+  background: color-mix(in srgb, var(--ac) 10%, var(--card));
+  border: 1px solid var(--ac);
+  color: var(--ac);
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.header-login-link:hover {
+  background: var(--ac);
+  color: #fff;
+}
+
+/* ========================================================
+   نافذة الملف الشخصي الشاملة (User Profile Modal)
+   ======================================================== */
+.profile-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: fadeIn 0.2s ease;
+}
+
+.profile-modal-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 580px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-modal-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-modal-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile-modal-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-user-hero {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: color-mix(in srgb, var(--card) 85%, var(--bg));
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.profile-avatar-large {
+  font-size: 2.8rem;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--ac) 15%, var(--card));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--ac);
+  flex-shrink: 0;
+}
+
+.profile-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.profile-stat-box {
+  background: color-mix(in srgb, var(--card) 80%, var(--bg));
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 10px;
+  text-align: center;
+}
+
+.profile-stat-val {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--ac);
+  display: block;
+}
+
+.profile-stat-lbl {
+  font-size: 0.74rem;
+  color: var(--mut);
+}
+
+.tracks-breakdown-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 220px;
+  overflow-y: auto;
+  padding-inline-end: 4px;
+}
+
+.track-progress-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: color-mix(in srgb, var(--card) 90%, var(--bg));
+  border: 1px solid var(--line);
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.track-row-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.profile-modal-footer {
+  padding: 16px 24px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: color-mix(in srgb, var(--card) 95%, var(--bg));
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.btn-logout {
+  font: inherit;
+  font-size: 0.84rem;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 8px;
+  background: color-mix(in srgb, #ef4444 12%, var(--card));
+  color: #ef4444;
+  border: 1px solid color-mix(in srgb, #ef4444 30%, transparent);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-logout:hover {
+  background: #ef4444;
+  color: #fff;
+}
+
+.btn-save-profile {
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 7px 18px;
+  border-radius: 8px;
+  background: var(--ac);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-save-profile:hover {
+  opacity: 0.92;
+}
+
+/* استجابة الشاشات الصغيرة */
+@media (max-width: 860px) {
+  .login-container {
+    grid-template-columns: 1fr;
+  }
+  .login-hero-side {
+    display: none; /* التركيز على بطاقة تسجيل الدخول للشاشات الصغيرة */
+  }
+  .profile-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   تبويبات وقائمة المحفوظات (Bookmarks Tab Styles)
+   ========================================= */
+.profile-modal-tabs {
+  display: flex;
+  background: color-mix(in srgb, var(--line) 35%, transparent);
+  padding: 6px;
+  gap: 6px;
+  border-bottom: 1px solid var(--line);
+}
+
+.profile-tab-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--mut);
+  border: none;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.profile-tab-btn:hover {
+  color: var(--ink);
+  background: color-mix(in srgb, var(--card) 60%, transparent);
+}
+
+.profile-tab-btn.active {
+  background: var(--card);
+  color: var(--ac);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.profile-tab-count {
+  background: #d97706;
+  color: #fff;
+  border-radius: 99px;
+  padding: 1px 7px;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.profile-bookmarks-view {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 280px;
+}
+
+.bookmarks-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-clear-bookmarks {
+  background: transparent;
+  color: #ef4444;
+  border: 1px solid color-mix(in srgb, #ef4444 30%, transparent);
+  border-radius: 6px;
+  padding: 3px 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-clear-bookmarks:hover {
+  background: #ef4444;
+  color: #fff;
+}
+
+.empty-bookmarks-state {
+  text-align: center;
+  padding: 36px 16px;
+  background: color-mix(in srgb, var(--card) 85%, var(--bg));
+  border: 1px dashed var(--line);
+  border-radius: 16px;
+}
+
+.empty-bookmarks-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.empty-bookmarks-state h4 {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+  color: var(--ink);
+}
+
+.empty-bookmarks-state p {
+  margin: 0 auto 16px;
+  max-width: 420px;
+  font-size: 0.88rem;
+  color: var(--mut);
+  line-height: 1.6;
+}
+
+.btn-jump-action {
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: var(--ac);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-jump-action:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.btn-jump-action.secondary {
+  background: color-mix(in srgb, var(--line) 50%, var(--card));
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.bookmarks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-inline-end: 4px;
+}
+
+.bookmark-item-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 14px;
+  background: color-mix(in srgb, var(--card) 95%, var(--bg));
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  transition: all 0.18s ease;
+}
+
+.bookmark-item-card:hover {
+  border-color: var(--ac);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.bookmark-item-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.bookmark-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.bookmark-type-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--ac) 12%, var(--card));
+  color: var(--ac);
+}
+
+.bookmark-sub-info {
+  font-size: 0.75rem;
+  color: var(--mut);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bookmark-item-title {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bookmark-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.btn-open-bookmark {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 7px;
+  background: var(--ac);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.btn-open-bookmark:hover {
+  opacity: 0.92;
+}
+
+.btn-remove-bookmark {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--mut);
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.15s ease;
+}
+
+.btn-remove-bookmark:hover {
+  background: #fee2e2;
+  border-color: #fca5a5;
+  color: #ef4444;
+}
+

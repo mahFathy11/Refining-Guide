@@ -1,0 +1,467 @@
+/* =======================================================
+   أنماط صفحة قنوات اليوتيوب (Channels Page)
+   ======================================================= */
+
+.channels-page {
+  padding-bottom: 50px;
+}
+
+.channels-header {
+  position: relative;
+  margin-top: 14px;
+  margin-bottom: 28px;
+  border-radius: 22px;
+  padding: clamp(24px, 4vw, 36px) clamp(20px, 4vw, 36px);
+  background-image: 
+    linear-gradient(
+      135deg, 
+      rgba(9, 18, 34, 0.82) 0%, 
+      rgba(11, 22, 42, 0.88) 55%, 
+      rgba(15, 23, 42, 0.94) 100%
+    ),
+    url('/bg-channels.png');
+  background-size: cover;
+  background-position: center 40%;
+  background-repeat: no-repeat;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #f8fafc;
+  overflow: hidden;
+}
+
+.channels-header h1 {
+  font-size: clamp(1.8rem, 3.2vw, 2.3rem);
+  font-weight: 800;
+  margin: 0.2em 0 0.3em;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  background: none;
+  -webkit-text-fill-color: initial;
+}
+
+.channels-header .lead {
+  font-size: clamp(0.95rem, 1.8vw, 1.08rem);
+  color: #cbd5e1;
+  max-width: 85ch;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* شريط إحصائيات القنوات */
+.channels-stats-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.channel-stat-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.channel-stat-card:hover {
+  transform: translateY(-2px);
+  border-color: #ef4444;
+}
+
+.stat-icon-wrap {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: color-mix(in srgb, #ef4444 12%, var(--card));
+  color: #ef4444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 0.82rem;
+  color: var(--mut);
+}
+
+/* شريط البحث والفلاتر */
+.channels-filter-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px 22px;
+  margin-bottom: 26px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+}
+
+.channels-search-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.channels-search-input {
+  flex: 1;
+  min-width: 260px;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--line) 15%, var(--card));
+  color: var(--ink);
+  transition: border-color 0.2s ease;
+}
+
+.channels-search-input:focus {
+  border-color: #ef4444;
+  outline: none;
+}
+
+.channels-category-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.category-pill-btn {
+  font-family: inherit;
+  font-size: 0.84rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 99px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--line) 20%, var(--card));
+  color: var(--mut);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.category-pill-btn:hover {
+  border-color: #ef4444;
+  color: var(--ink);
+}
+
+.category-pill-btn.active {
+  background: #ef4444;
+  color: #ffffff;
+  border-color: #ef4444;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.35);
+}
+
+.channels-results-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.86rem;
+  color: var(--mut);
+  margin-bottom: 18px;
+  padding: 0 4px;
+}
+
+/* شبكة كروت القنوات */
+.channels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 20px;
+}
+
+.channel-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.channel-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ef4444, #f97316);
+  opacity: 0.7;
+  transition: opacity 0.2s ease, height 0.2s ease;
+}
+
+.channel-card:hover {
+  transform: translateY(-4px);
+  border-color: #ef4444;
+  box-shadow: 0 10px 30px rgba(239, 68, 68, 0.1);
+}
+
+.channel-card:hover::before {
+  opacity: 1;
+  height: 4px;
+}
+
+.channel-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.channel-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: color-mix(in srgb, #ef4444 10%, var(--card));
+  border: 1px solid color-mix(in srgb, #ef4444 25%, transparent);
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.channel-header-text {
+  flex: 1;
+}
+
+.channel-name-ar {
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0 0 2px;
+  line-height: 1.35;
+}
+
+.channel-name-en {
+  font-size: 0.82rem;
+  color: var(--mut);
+  direction: ltr;
+  text-align: right;
+  margin: 0;
+}
+
+.channel-badges-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.ch-badge {
+  font-size: 0.74rem;
+  padding: 2px 8px;
+  border-radius: 99px;
+  border: 1px solid var(--line);
+  font-weight: 600;
+}
+
+.ch-badge.featured {
+  color: #ef4444;
+  background: color-mix(in srgb, #ef4444 10%, var(--card));
+  border-color: color-mix(in srgb, #ef4444 30%, transparent);
+}
+
+.ch-badge.tag {
+  color: var(--ac);
+  background: color-mix(in srgb, var(--ac) 8%, var(--card));
+  border-color: color-mix(in srgb, var(--ac) 25%, transparent);
+}
+
+.channel-description {
+  font-size: 0.9rem;
+  color: var(--mut);
+  line-height: 1.65;
+  margin: 0 0 16px;
+  flex-grow: 1;
+}
+
+/* قائمة المحاور والكورسات */
+.channel-topics-box {
+  background: color-mix(in srgb, var(--line) 15%, var(--card));
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+}
+
+.topics-box-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.channel-topics-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.channel-topics-list li {
+  font-size: 0.8rem;
+  color: var(--ink);
+  line-height: 1.45;
+  position: relative;
+  padding-inline-start: 14px;
+}
+
+.channel-topics-list li::before {
+  content: "•";
+  color: #ef4444;
+  font-weight: bold;
+  position: absolute;
+  inset-inline-start: 2px;
+}
+
+.topics-more-btn {
+  background: none;
+  border: none;
+  color: var(--ac);
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 0 0;
+  display: block;
+}
+
+.topics-more-btn:hover {
+  text-decoration: underline;
+}
+
+/* زر الذهاب لليوتيوب */
+.channel-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #ff0000;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+  box-shadow: 0 3px 12px rgba(255, 0, 0, 0.22);
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.channel-action-btn:hover {
+  background: #cc0000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 0, 0, 0.32);
+}
+
+.yt-play-icon {
+  font-size: 1rem;
+}
+
+/* حالة عدم وجود نتائج */
+.channels-empty-state {
+  text-align: center;
+  padding: 48px 20px;
+  background: var(--card);
+  border: 1px dashed var(--line);
+  border-radius: 16px;
+  color: var(--mut);
+}
+
+.empty-icon {
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+}
+
+.btn-reset-filter {
+  margin-top: 14px;
+  background: var(--ac);
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* =========================================
+   كارت القنوات المميز في الصفحة الرئيسية
+   ========================================= */
+
+.card-featured-channels {
+  background: linear-gradient(135deg, color-mix(in srgb, #ef4444 8%, var(--card)), var(--card));
+  border: 1.5px solid color-mix(in srgb, #ef4444 35%, var(--line));
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-bottom: 14px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card-featured-channels::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff0000, #f97316, #ef4444);
+}
+
+.card-featured-channels:hover {
+  border-color: #ef4444;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(239, 68, 68, 0.15);
+}
+
+.card-featured-channels .featured-action {
+  color: #ef4444;
+}
+
+.card-featured-channels:hover .featured-action {
+  transform: translateX(-4px);
+}
+
+.tag.yt {
+  color: #dc2626;
+  border-color: #dc2626;
+  background: color-mix(in srgb, #dc2626 8%, var(--card));
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .channels-grid {
+    grid-template-columns: 1fr;
+  }
+}

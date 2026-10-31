@@ -1,0 +1,214 @@
+/* ============================================================
+   Main Site Footer Styling - Chem Tracks
+   ============================================================ */
+
+.site-footer {
+  background: var(--card);
+  border-top: 1px solid var(--line);
+  margin-top: 70px;
+  padding-top: 48px;
+  padding-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--ac), #38bdf8, transparent);
+  opacity: 0.9;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1.2fr;
+  gap: 36px;
+  margin-bottom: 36px;
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.footer-col-brand .footer-brand-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0 0 12px;
+  text-decoration: none;
+}
+
+.footer-brand-icon {
+  font-size: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--ac) 15%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--ac) 30%, transparent);
+}
+
+.footer-brand-desc {
+  font-size: 0.88rem;
+  color: var(--mut);
+  line-height: 1.75;
+  margin: 0 0 16px;
+  max-width: 44ch;
+}
+
+.footer-stats-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.footer-stat-chip {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 99px;
+  background: color-mix(in srgb, var(--line) 30%, var(--card));
+  color: var(--mut);
+  border: 1px solid var(--line);
+}
+
+.footer-col-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-links-list a {
+  color: var(--mut);
+  text-decoration: none;
+  font-size: 0.86rem;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-links-list a:hover {
+  color: var(--ac);
+  transform: translateX(-4px);
+}
+
+.footer-guide-note {
+  font-size: 0.85rem;
+  color: var(--mut);
+  line-height: 1.7;
+  background: color-mix(in srgb, var(--line) 20%, var(--card));
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}
+
+.footer-guide-note strong {
+  color: var(--ink);
+}
+
+/* ============================================================
+   Bottom Bar: Creator Signature & Copyright
+   ============================================================ */
+
+.footer-bottom-bar {
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-copyright {
+  font-size: 0.82rem;
+  color: var(--mut);
+  margin: 0;
+}
+
+/* بطاقة صانع المنصة الفاخرة */
+.footer-creator-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 18px;
+  border-radius: 99px;
+  background: color-mix(in srgb, var(--ac) 10%, var(--card));
+  border: 1.5px solid color-mix(in srgb, var(--ac) 35%, transparent);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.footer-creator-card:hover {
+  border-color: var(--ac);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px color-mix(in srgb, var(--ac) 25%, transparent);
+  background: color-mix(in srgb, var(--ac) 15%, var(--card));
+}
+
+.creator-avatar {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.creator-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.86rem;
+  color: var(--ink);
+  font-weight: 600;
+  direction: ltr;
+  flex-wrap: wrap;
+}
+
+.creator-name {
+  color: var(--ac);
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.creator-badge {
+  display: inline-block;
+  background: var(--ac);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 99px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 6px color-mix(in srgb, var(--ac) 35%, transparent);
+}

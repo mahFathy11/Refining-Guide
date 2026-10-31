@@ -1,0 +1,362 @@
+/* =======================================================
+   أنماط شريط البحث العام والقائمة المنسدلة (Global Search)
+   ======================================================= */
+
+.global-search-box {
+  position: relative;
+  flex: 1;
+  max-width: 460px;
+  min-width: 200px;
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: color-mix(in srgb, var(--card) 85%, var(--bg));
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  padding: 0 12px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.search-input-wrapper:focus-within {
+  border-color: var(--ac);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ac) 20%, transparent);
+  background: var(--card);
+}
+
+.search-icon {
+  display: flex;
+  align-items: center;
+  color: var(--mut);
+  margin-inline-end: 8px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 7px 0;
+  font: inherit;
+  font-size: 0.88rem;
+  background: transparent;
+  border: none;
+  color: var(--ink);
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: var(--mut);
+  opacity: 0.85;
+}
+
+/* زر مسح البحث */
+.clear-btn {
+  background: none;
+  border: none;
+  color: var(--mut);
+  font-size: 1.2rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 2px 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease;
+}
+
+.clear-btn:hover {
+  color: var(--ink);
+}
+
+/* القائمة المنسدلة للنتائج */
+.search-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  inset-inline-start: 0;
+  width: 100%;
+  min-width: 340px;
+  max-width: 540px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+  z-index: 1000;
+  overflow: hidden;
+  animation: searchDropIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes searchDropIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.results-scroll {
+  max-height: 480px;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.results-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.results-scroll::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 4px;
+}
+
+/* المجموعات */
+.result-group {
+  margin-bottom: 10px;
+}
+
+.result-group:last-child {
+  margin-bottom: 0;
+}
+
+.group-header {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--mut);
+  padding: 6px 10px 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* بنود النتائج */
+.result-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.result-item:hover {
+  background: color-mix(in srgb, var(--ac) 10%, var(--card));
+}
+
+.result-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.result-title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.result-sub {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.result-desc {
+  font-size: 0.76rem;
+  color: var(--mut);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* شارات داخل النتائج */
+.track-badge,
+.stage-badge,
+.sector-badge,
+.loc-badge {
+  font-size: 0.72rem;
+  padding: 1px 7px;
+  border-radius: 99px;
+  white-space: nowrap;
+}
+
+.track-badge {
+  background: color-mix(in srgb, var(--ac) 12%, var(--card));
+  color: var(--ac);
+  border: 1px solid color-mix(in srgb, var(--ac) 25%, transparent);
+}
+
+.stage-badge {
+  background: var(--line);
+  color: var(--mut);
+}
+
+.sector-badge {
+  background: color-mix(in srgb, var(--ok) 12%, var(--card));
+  color: var(--ok);
+  border: 1px solid color-mix(in srgb, var(--ok) 25%, transparent);
+}
+
+.loc-badge {
+  color: var(--mut);
+  font-size: 0.72rem;
+}
+
+.type-tag,
+.company-tag,
+.track-tag,
+.channel-tag,
+.guide-tag {
+  font-size: 0.74rem;
+  color: var(--mut);
+  white-space: nowrap;
+}
+
+.result-item:hover .company-tag,
+.result-item:hover .track-tag,
+.result-item:hover .channel-tag,
+.result-item:hover .guide-tag {
+  color: var(--ac);
+}
+
+/* أزرار الإجراءات السريعة داخل عنصر البحث */
+.result-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.result-direct-btn {
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 99px;
+  background: color-mix(in srgb, #ef4444 14%, var(--card));
+  color: #ef4444;
+  border: 1px solid color-mix(in srgb, #ef4444 35%, transparent);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.result-direct-btn:hover {
+  background: #ef4444;
+  color: #fff;
+  border-color: #ef4444;
+  transform: translateY(-1px);
+}
+
+.result-direct-btn.drive-btn {
+  background: color-mix(in srgb, #10b981 14%, var(--card));
+  color: #10b981;
+  border-color: color-mix(in srgb, #10b981 35%, transparent);
+}
+
+.result-direct-btn.drive-btn:hover {
+  background: #10b981;
+  color: #fff;
+  border-color: #10b981;
+}
+
+.result-goto-btn {
+  font-size: 0.74rem;
+  color: var(--ac);
+  font-weight: 500;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+}
+
+.channel-badge {
+  background: color-mix(in srgb, #a855f7 12%, var(--card));
+  color: #a855f7;
+  border: 1px solid color-mix(in srgb, #a855f7 25%, transparent);
+}
+
+.guide-badge {
+  background: color-mix(in srgb, #f59e0b 12%, var(--card));
+  color: #d97706;
+  border: 1px solid color-mix(in srgb, #f59e0b 25%, transparent);
+}
+
+/* وميض تمييز الكورس عند الانتقال له من البحث */
+@keyframes resourceHighlightGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.7);
+    border-color: var(--ac);
+    transform: scale(1.015);
+  }
+  30% {
+    box-shadow: 0 0 0 8px rgba(14, 165, 233, 0.3), 0 8px 24px rgba(14, 165, 233, 0.2);
+    border-color: var(--ac);
+    transform: scale(1.02);
+  }
+  70% {
+    box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.15);
+    border-color: var(--ac);
+    transform: scale(1.01);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(14, 165, 233, 0);
+    border-color: var(--line);
+    transform: scale(1);
+  }
+}
+
+.res.highlight-pulse {
+  animation: resourceHighlightGlow 1.8s ease-in-out 3;
+  border-color: var(--ac) !important;
+  background: color-mix(in srgb, var(--ac) 9%, var(--card)) !important;
+  scroll-margin-top: 100px;
+}
+
+/* حالة عدم وجود نتائج */
+.no-results {
+  padding: 24px 16px;
+  text-align: center;
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.no-res-icon {
+  font-size: 1.8rem;
+  opacity: 0.6;
+}
+
+.no-results small {
+  color: var(--mut);
+  font-size: 0.8rem;
+}
+
+/* استجابة الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .global-search-box {
+    order: 3;
+    max-width: 100%;
+    width: 100%;
+    margin-top: 6px;
+  }
+  .search-dropdown {
+    position: fixed;
+    top: 120px;
+    inset-inline: 16px;
+    width: auto;
+    max-width: none;
+  }
+}
